@@ -44,29 +44,24 @@ architecture Behavioral of ClockDivider_tb is
            clockOut : out STD_LOGIC );
     end component;
 
-signal reset : std_logic; 
-signal clock : std_logic; 
-signal clockOut : std_logic; 
+signal reset : std_logic := '0'; 
+signal clock : std_logic := '0'; 
+signal clockOut : std_logic :='0' ;
 
-signal counter : integer range 0 to 400000000;
+
 
 begin
 
-reset_proc: process 
-begin
-    reset <= '0';
-    wait for 5 ns; 
-    reset <= '1';
-    wait for 5 ns;
-    reset <= '0';
-end process;
+    uut : ClockDivider
+    generic map(MaxCount => 10)
+    port map (reset => reset, clock => clock, clockOut => clockOut);
 
 sysClock: process
 begin 
     clock <= '0';
     wait for 100ns;
     clock <= '1';
-    wait for 100ns; 
+    wait for 100ns;
 end process;
 
 end Behavioral;
