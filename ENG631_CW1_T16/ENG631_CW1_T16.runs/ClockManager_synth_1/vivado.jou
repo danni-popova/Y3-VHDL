@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Oct 24 17:18:16 2018
+# Process ID: 10428
+# Current directory: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.runs/ClockManager_synth_1
+# Command line: vivado.exe -log ClockManager.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ClockManager.tcl
+# Log file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.runs/ClockManager_synth_1/ClockManager.vds
+# Journal file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.runs/ClockManager_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ClockManager.tcl -notrace
