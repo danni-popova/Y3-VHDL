@@ -47,7 +47,7 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
         if inputReset = '1' then 
             sigCounter <= 0;
         elsif rising_edge(sigSystemClock) then 
-            if sigCounter >= (50000000-1) then 
+            if sigCounter >= (40000000-1) then 
                sigCounter <= 0;
             else 
                 if inputFast = '1' then 
@@ -88,15 +88,15 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
     end process display_sequence;
     
     with sigDisplayCount select 
-    outputSegmentCathodes <= "1111110" when 0, 
-                             "1111100" when 1, 
-                             "1111110" when 2,
-                             "1111100" when 3,
-                             "1111110" when 4,
-                             "1111100" when 5,
-                             "1111110" when 6,
-                             "1111100" when 7,
-                             "1111110" when others;
+    outputSegmentCathodes <= "0000001" when 0, 
+                             "0010010" when 1, 
+                             "0000110" when 2,
+                             "0000110" when 3,
+                             "1001100" when 4,
+                             "0100100" when 5,
+                             "0100000" when 6,
+                             "0001111" when 7,
+                             "0000000" when others;
                          
      outputSegmentDP <= '0' when sigDisplayCount = 0 else '1';
      
