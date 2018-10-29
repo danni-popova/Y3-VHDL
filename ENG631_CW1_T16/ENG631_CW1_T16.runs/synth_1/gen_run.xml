@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1540306461">
-  <File Type="PA-TCL" Name="MasterComponent.tcl"/>
-  <File Type="REPORTS-TCL" Name="MasterComponent_reports.tcl"/>
-  <File Type="RDS-RDS" Name="MasterComponent.vds"/>
-  <File Type="RDS-DCP" Name="MasterComponent.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1540811425">
+  <File Type="PA-TCL" Name="MilestoneOne.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="MilestoneOne_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="MilestoneOne_reports.tcl"/>
+  <File Type="RDS-RDS" Name="MilestoneOne.vds"/>
+  <File Type="RDS-UTIL" Name="MilestoneOne_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="MilestoneOne_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="MilestoneOne.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="MilestoneOne_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="MilestoneOne_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/MasterComponent.vhd">
+    <File Path="$PSRCDIR/sources_1/new/MilestoneOne.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ClockDivider.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="MasterComponent"/>
+      <Option Name="TopModule" Val="MilestoneOne"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/MilestoneOne.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
@@ -35,4 +39,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
 </GenRun>

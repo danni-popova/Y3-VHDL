@@ -2,11 +2,11 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue Oct 23 15:54:25 2018
-# Process ID: 7380
+# Start of session at: Mon Oct 29 11:10:28 2018
+# Process ID: 4252
 # Current directory: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1
-# Command line: vivado.exe -log MasterComponent.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MasterComponent.tcl
-# Log file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MasterComponent.vds
+# Command line: vivado.exe -log MilestoneOne.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MilestoneOne.tcl
+# Log file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MilestoneOne.vds
 # Journal file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source MasterComponent.tcl -notrace
+source MilestoneOne.tcl -notrace
