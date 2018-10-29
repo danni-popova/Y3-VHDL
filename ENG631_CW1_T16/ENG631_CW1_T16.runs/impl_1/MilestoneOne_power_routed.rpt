@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Mon Oct 29 11:30:48 2018
+| Date             : Mon Oct 29 15:44:45 2018
 | Host             : W0D819A1BC194A5 running 64-bit major release  (build 9200)
 | Command          : report_power -file MilestoneOne_power_routed.rpt -pb MilestoneOne_power_summary_routed.pb -rpx MilestoneOne_power_routed.rpx
 | Design           : MilestoneOne
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.179        |
+| Total On-Chip Power (W)  | 0.181        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.107        |
+| Dynamic (W)              | 0.109        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |       91 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       42 |     20800 |            0.20 |
-|   CARRY4       |    <0.001 |        7 |      8150 |            0.09 |
-|   Register     |    <0.001 |       31 |     41600 |            0.07 |
+| Clocks         |     0.001 |        8 |       --- |             --- |
+| Slice Logic    |    <0.001 |      186 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       91 |     20800 |            0.44 |
+|   CARRY4       |    <0.001 |       12 |      8150 |            0.15 |
+|   Register     |    <0.001 |       65 |     41600 |            0.16 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |       58 |       --- |             --- |
+| Signals        |    <0.001 |      117 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
-| I/O            |    <0.001 |       15 |       106 |           14.15 |
+| I/O            |    <0.001 |       14 |       106 |           13.21 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.179 |          |           |                 |
+| Total          |     0.181 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
+| Vccint    |       1.000 |     0.012 |       0.003 |      0.010 |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -146,7 +146,7 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| MilestoneOne |     0.107 |
+| MilestoneOne |     0.109 |
 |   Demo_DCM   |     0.106 |
 |     inst     |     0.106 |
 +--------------+-----------+

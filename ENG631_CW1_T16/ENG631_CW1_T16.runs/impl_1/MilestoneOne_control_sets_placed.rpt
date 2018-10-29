@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Oct 29 11:30:21 2018
+| Date         : Mon Oct 29 15:44:20 2018
 | Host         : W0D819A1BC194A5 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MilestoneOne_control_sets_placed.rpt
 | Design       : MilestoneOne
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     3 |
-| Unused register locations in slices containing registers |    17 |
+| Number of unique control sets                            |     7 |
+| Unused register locations in slices containing registers |    31 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            1 |
-|      4 |            1 |
+|      2 |            2 |
+|      4 |            4 |
 |    16+ |            1 |
 +--------+--------------+
 
@@ -46,24 +46,28 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |              27 |            8 |
+| No           | No                    | No                     |               2 |            1 |
+| No           | No                    | Yes                    |              47 |           14 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               4 |            1 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              16 |            5 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------+----------------+-----------------------------+------------------+----------------+
-|       Clock Signal      |  Enable Signal |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
-+-------------------------+----------------+-----------------------------+------------------+----------------+
-| ~Demo_DCM/inst/clk_out1 |                | outputSegmentAnodes_OBUF[0] |                1 |              1 |
-|  Demo_DCM/inst/clk_out1 | sigClockEnable | outputSegmentAnodes_OBUF[0] |                1 |              4 |
-|  Demo_DCM/inst/clk_out1 |                | outputSegmentAnodes_OBUF[0] |                7 |             26 |
-+-------------------------+----------------+-----------------------------+------------------+----------------+
++-------------------------+---------------------------------+---------------------------------+------------------+----------------+
+|       Clock Signal      |          Enable Signal          |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-------------------------+---------------------------------+---------------------------------+------------------+----------------+
+|  Demo_DCM/inst/clk_out1 |                                 |                                 |                1 |              2 |
+| ~Demo_DCM/inst/clk_out1 |                                 | inputReset_IBUF                 |                2 |              2 |
+|  Demo_DCM/inst/clk_out1 | sigClockEnable                  | sigDigitToDisplay[0][3]_i_1_n_0 |                1 |              4 |
+|  Demo_DCM/inst/clk_out1 | sigDigitToDisplay[2]            | sigDigitToDisplay[3]            |                1 |              4 |
+|  Demo_DCM/inst/clk_out1 | sigDigitToDisplay[1]            | sigDigitToDisplay[2]            |                1 |              4 |
+|  Demo_DCM/inst/clk_out1 | sigDigitToDisplay[0][3]_i_1_n_0 | sigDigitToDisplay[1]            |                2 |              4 |
+|  Demo_DCM/inst/clk_out1 |                                 | inputReset_IBUF                 |               12 |             45 |
++-------------------------+---------------------------------+---------------------------------+------------------+----------------+
 
 

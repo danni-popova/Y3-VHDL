@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Oct 29 11:30:48 2018
+| Date         : Mon Oct 29 15:44:45 2018
 | Host         : W0D819A1BC194A5 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file MilestoneOne_methodology_drc_routed.rpt -pb MilestoneOne_methodology_drc_routed.pb -rpx MilestoneOne_methodology_drc_routed.rpx
 | Design       : MilestoneOne
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 12
+             Violations found: 15
 +-----------+----------+------------------------------------------------+------------+
 | Rule      | Severity | Description                                    | Violations |
 +-----------+----------+------------------------------------------------+------------+
 | TIMING-6  | Warning  | No common primary clock between related clocks | 2          |
-| TIMING-18 | Warning  | Missing input or output delay                  | 10         |
+| TIMING-18 | Warning  | Missing input or output delay                  | 13         |
 +-----------+----------+------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -55,42 +55,57 @@ Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentCathodes[0] relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentAnodes[0] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentCathodes[1] relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentAnodes[1] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentCathodes[2] relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentAnodes[2] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentCathodes[3] relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentAnodes[3] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentCathodes[4] relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentCathodes[0] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentCathodes[5] relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentCathodes[1] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentCathodes[6] relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentCathodes[2] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An output delay is missing on outputSegmentDP relative to clock(s) C100Mhz_pin, inputClock
+An output delay is missing on outputSegmentCathodes[3] relative to clock(s) C100Mhz_pin, inputClock
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on outputSegmentCathodes[4] relative to clock(s) C100Mhz_pin, inputClock
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on outputSegmentCathodes[5] relative to clock(s) C100Mhz_pin, inputClock
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on outputSegmentCathodes[6] relative to clock(s) C100Mhz_pin, inputClock
 Related violations: <none>
 
 
