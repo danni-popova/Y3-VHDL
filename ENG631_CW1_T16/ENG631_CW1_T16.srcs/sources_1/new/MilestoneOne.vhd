@@ -8,7 +8,7 @@ entity MilestoneOne is
            inputFast : in STD_LOGIC;
            --outputLEDs : out STD_LOGIC_VECTOR (15 downto 0);
            outputSegmentCathodes : out STD_LOGIC_VECTOR (6 downto 0);
-           outputSegmentDP : out STD_LOGIC;
+           --outputSegmentDP : out STD_LOGIC;
            outputSegmentAnodes : out STD_LOGIC_VECTOR (3 downto 0));
 end MilestoneOne;
 
@@ -24,7 +24,7 @@ architecture Behavioral of MilestoneOne is
     signal sigClockEnable : std_logic; 
     
     -- LED and seven segment output
-    signal sigDisplayCount : integer range 0 to 8;
+    signal sigDisplayCount : integer range 0 to 9;
     
     -- DCM generated component declaration, copied from stub
     component clk_wiz_0 is 
@@ -78,7 +78,7 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
             sigDisplayCount <= 0;
        elsif rising_edge(sigSystemClock) then 
         if sigClockEnable = '1' then 
-            if sigDisplayCount < 8 then 
+            if sigDisplayCount < 9 then 
                 sigDisplayCount <= sigDisplayCount + 1; 
             else
                 sigDisplayCount <= 0;
@@ -96,9 +96,9 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
                              "0100100" when 5,
                              "0100000" when 6,
                              "0001111" when 7,
+                             "0000000" when 8,
+                             "0000100" when 9,
                              "0000000" when others;
-                         
-     outputSegmentDP <= '0' when sigDisplayCount = 0 else '1';
      
      outputSegmentAnodes <= "1111" when inputReset = '1' else "0000";
 
