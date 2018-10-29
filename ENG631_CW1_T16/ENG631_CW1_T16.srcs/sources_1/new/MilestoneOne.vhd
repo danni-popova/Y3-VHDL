@@ -26,6 +26,10 @@ architecture Behavioral of MilestoneOne is
     -- LED and seven segment output
     signal sigDisplayCount : integer range 0 to 9;
     
+    -- Counter for anodes change 
+    signal sigAnodesPattern : std_logic_vector (3 downto 0);
+    signal sigAnodesCounter : integer range 0 to 3; 
+    
     -- DCM generated component declaration, copied from stub
     component clk_wiz_0 is 
         Port (
@@ -59,6 +63,16 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
         end if;
     end process clock_divider;
     
+    anodes_counter: Process (sigSystemClock, sigAnodesCounter)
+    begin 
+    if rising_edge(sigSystemClock)then
+        if sigAnodesCounter < 3 then
+            sigAnodesCounter <= sigAnodesCounter + 1;
+         else sigAnodesCounter <= 0;
+         end if;
+     end if;
+    end process anodes_counter;
+    
     signal_gen: Process (inputReset, sigSystemClock, sigCounter)
     begin
         if inputReset = '1' then 
@@ -89,8 +103,8 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
     
     with sigDisplayCount select 
     outputSegmentCathodes <= "0000001" when 0, 
-                             "0010010" when 1, 
-                             "0000110" when 2,
+                             "1001111" when 1, 
+                             "0010010" when 2,
                              "0000110" when 3,
                              "1001100" when 4,
                              "0100100" when 5,
@@ -100,6 +114,15 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
                              "0000100" when 9,
                              "0000000" when others;
      
-     outputSegmentAnodes <= "1111" when inputReset = '1' else "0000";
+     with sigAnodesCounter select 
+     sigAnodesPattern <= "0001" when 0,
+                         "0010" when 1,
+                         "0100" when 2,
+                         "1000" when 3,
+                         "0000" when others;
+     
+     outputSegmentAnodes <= sigAnodesPattern;
+     
+     --outputSegmentAnodes <= "1111" when inputReset = '1' else "0000";
 
 end Behavioral;
