@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 10/24/2018 06:01:06 PM
--- Design Name: 
+-- Design Name:
 -- Module Name: BinaryDecimalConverter - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -33,10 +33,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity BinaryDecimalConverter is
     Port ( inBinaryNumber : in STD_LOGIC_VECTOR (13 downto 0);
-           outUnits : in STD_LOGIC_VECTOR (4 downto 0);
-           outTens : in STD_LOGIC_VECTOR (4 downto 0);
-           outHundreds : in STD_LOGIC_VECTOR (4 downto 0);
-           outThousands : in STD_LOGIC_VECTOR (4 downto 0));
+           outUnits : out STD_LOGIC_VECTOR (3 downto 0);
+           outTens : out STD_LOGIC_VECTOR (3 downto 0);
+           outHundreds : out STD_LOGIC_VECTOR (3 downto 0);
+           outThousands : out STD_LOGIC_VECTOR (3 downto 0));
 end BinaryDecimalConverter;
 
 architecture Behavioral of BinaryDecimalConverter is

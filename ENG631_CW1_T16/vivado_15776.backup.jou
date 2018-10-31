@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Oct 25 18:48:56 2018
+# Process ID: 15776
+# Current directory: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6904 D:\University\ENG631 - VHDL and FPGA\VHDL Source\ENG631_CW1_T16\ENG631_CW1_T16.xpr
+# Log file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/vivado.log
+# Journal file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.xpr}
+update_compile_order -fileset sources_1
