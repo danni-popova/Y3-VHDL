@@ -16,7 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/Tom/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1984-Tom-PC/incrSyn
+set_param synth.incrementalSynthesisCache {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/.Xil/Vivado-11720-Tom-PC/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -32,8 +32,16 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo {d:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_vhdl -library xil_defaultlib {{D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd}}
-read_ip -quiet {{d:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager.xci}}
+read_vhdl -library xil_defaultlib {
+  {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd}
+  {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd}
+  {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd}
+  {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd}
+  {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MUX4to1.vhd}
+  {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd}
+  {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd}
+}
+read_ip -quiet {{D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager.xci}}
 set_property used_in_implementation false [get_files -all {{d:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{d:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager.xdc}}]
 set_property used_in_implementation false [get_files -all {{d:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager_ooc.xdc}}]

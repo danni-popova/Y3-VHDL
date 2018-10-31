@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Oct 31 11:36:36 2018
+# Process ID: 11720
+# Current directory: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13160 D:\University\ENG631 - VHDL and FPGA\VHDL Source\ENG631_CW1_T16\ENG631_CW1_T16.xpr
+# Log file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/vivado.log
+# Journal file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16/ENG631_CW1_T16.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+update_compile_order -fileset sources_1
+refresh_design
+refresh_design
+refresh_design
+refresh_design
+refresh_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+refresh_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+refresh_design
+refresh_design
+refresh_design
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+current_design rtl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+current_design synth_1
+refresh_design
+current_design rtl_1
+refresh_design

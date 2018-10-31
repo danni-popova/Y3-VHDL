@@ -53,7 +53,7 @@ begin
         elsif rising_edge(clock) then
             clockOut <= '0'; --Check with Neils about this
             if counter < MaxCount - 1 then
-                counter <= counter +1;
+                counter <= counter + 1;
             else
                 counter <= 0;
                 clockOut <= '1';
