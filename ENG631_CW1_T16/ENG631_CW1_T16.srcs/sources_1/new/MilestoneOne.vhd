@@ -19,6 +19,8 @@ architecture Behavioral of MilestoneOne is
     
     -- main counter register
     signal sigCounter : integer range 0 to 40000000;
+    
+    -- secondary count register to drive display
     signal sigCounter2 : integer range 0 to 400000;
     
     -- clock enable for demo
@@ -48,10 +50,10 @@ architecture Behavioral of MilestoneOne is
 
 begin
 
-Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
+    Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
     reset => inputReset, clk_in1 => inputClock); 
     
-    increment_digit_one: Process(sigSystemClock, sigClockEnable, sigDigitToDisplay)
+    proc_counter: Process(sigSystemClock, sigClockEnable, sigDigitToDisplay)
     begin 
     if rising_edge(sigSystemClock) then 
         if sigClockEnable = '1' then
@@ -80,7 +82,7 @@ Demo_DCM : clk_wiz_0 port map ( clk_out1 => sigSystemClock,
             end if;
         end if;
     end if;            
-end process increment_digit_one;
+    end process proc_counter;
     
     clock_divider: Process (inputReset, sigSystemClock, inputFast, sigCounter)
     begin 
