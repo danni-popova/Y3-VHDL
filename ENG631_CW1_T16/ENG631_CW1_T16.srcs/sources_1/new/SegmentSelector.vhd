@@ -41,16 +41,16 @@ architecture Behavioral of SegmentSelector is
 begin
 
   with inDecimal select
-    outSegments <=  "00000010" when "0000", -- 0
-                    "10011110" when "0001", -- 1
-                    "00100100" when "0010", -- 2
-                    "00001100" when "0011", -- 3
-                    "10011000" when "0100", -- 4
-                    "01001000" when "0101", -- 5
-                    "01000000" when "0110", -- 6
-                    "00011110" when "0111", -- 7
-                    "00000000" when "1000", -- 8
-                    "00001000" when "1001", -- 9
-                    "00000001" when others; -- (.) Other Case
+    outSegments <=  "10000001" when "0000", -- 0
+                    "11001111" when "0001", -- 1
+                    "10010010" when "0010", -- 2
+                    "10000110" when "0011", -- 3
+                    "11001100" when "0100", -- 4
+                    "10100100" when "0101", -- 5
+                    "10100000" when "0110", -- 6
+                    "10001111" when "0111", -- 7
+                    "10000000" when "1000", -- 8
+                    "10000100" when "1001", -- 9
+                    "01111111" when others; -- (.) Other Case
 
 end Behavioral;

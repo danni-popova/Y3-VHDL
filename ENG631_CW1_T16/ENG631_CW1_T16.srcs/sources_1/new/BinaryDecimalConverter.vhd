@@ -45,35 +45,35 @@ architecture Behavioral of BinaryDecimalConverter is
 ------
 -- Signals to store/calculate values
 ------
-  signal sigUnits : integer range 0 to 9;
-  signal sigTens : integer range 0 to 9;
-  signal sigHundreds : integer range 0 to 9;
-  signal sigThousands : integer range 0 to 9;
+  shared variable sigUnits : integer range 0 to 9;
+  shared variable sigTens : integer range 0 to 9;
+  shared variable sigHundreds : integer range 0 to 9;
+  shared variable sigThousands : integer range 0 to 9;
 
-  signal sigNumber : integer range 0 to 9999;
+  shared variable sigNumber : integer range 0 to 9999;
 
 
 begin
 
   outUnits <= std_logic_vector(to_unsigned(sigUnits, outUnits'length));
-  outTens <= std_logic_vector(to_unsigned(sigUnits, outUnits'length));
-  outHundreds <= std_logic_vector(to_unsigned(sigUnits, outUnits'length));
-  outThousands <= std_logic_vector(to_unsigned(sigUnits, outUnits'length));
+  outTens <= std_logic_vector(to_unsigned(sigTens, outUnits'length));
+  outHundreds <= std_logic_vector(to_unsigned(sigHundreds, outUnits'length));
+  outThousands <= std_logic_vector(to_unsigned(sigThousands, outUnits'length));
 
   procConverter : process (inBinaryNumber)
   begin
-    sigNumber <= to_integer(unsigned(inBinaryNumber));
+    sigNumber := to_integer(unsigned(inBinaryNumber));
 
-    sigUnits <= sigNumber mod 10;
-    sigNumber <= (sigNumber - sigUnits) / 10;
+    sigUnits := sigNumber mod 10;
+    sigNumber := (sigNumber - sigUnits) / 10;
 
-    sigTens <= sigNumber mod 10;
-    sigNumber <= (sigNumber - sigTens) / 10;
+    sigTens := sigNumber mod 10;
+    sigNumber := (sigNumber - sigTens) / 10;
 
-    sigHundreds <= sigNumber mod 10;
-    sigNumber <= (sigNumber - sigHundreds) / 10;
+    sigHundreds := sigNumber mod 10;
+    sigNumber := (sigNumber - sigHundreds) / 10;
 
-    sigThousands <= sigNumber; --Can do this because we will have worked our way to the last number by here
+    sigThousands := sigNumber; --Can do this because we will have worked our way to the last number by here
 
   end process;
 

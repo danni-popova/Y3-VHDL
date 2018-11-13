@@ -133,7 +133,7 @@ begin
     port map (inReset => inReset, inSelection => sigSegment, inNumber => sigCount, outDigit => outDigit);
 
   compSegmentCounter : Counter
-    generic map (genMaxCount => 3)
+    generic map (genMaxCount => 4)
     port map (inClock => sigDisplayClock, inReset => inReset, outCount (1 downto 0) => sigSegment, outCount (13 downto 2) => open); -- Splits last two out... Look into doing with Logs
 
 ------

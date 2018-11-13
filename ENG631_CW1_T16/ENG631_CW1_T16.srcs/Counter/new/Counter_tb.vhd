@@ -58,7 +58,7 @@ architecture Behavioral of Counter_tb is
 begin
 
   uut : Counter
-    generic map (genMaxCount => 3)
+    generic map (genMaxCount => 4)
     port map (inClock => sigClock, inReset => sigReset, outCount => sigCount);
 
   procClock : process
