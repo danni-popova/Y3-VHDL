@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MasterComponent is
     Port ( inReset : in std_logic;
+           inFast  : in  STD_LOGIC;
            inClock : in STD_LOGIC;
            outDigit : out STD_LOGIC_VECTOR (7 downto 0);
            outSegmentSelector :out STD_LOGIC_VECTOR (3 downto 0));
@@ -102,6 +103,10 @@ signal sigSystemClock : std_logic;
 
 signal sig1Hz : std_logic;
 
+signal sig1000Hz : std_logic;
+
+signal sigSelectedClock : std_logic;
+
 signal sigDisplayClock : std_logic;
 
 signal sigCount : std_logic_vector (13 downto 0);
@@ -120,21 +125,21 @@ begin
   compClock1Hz : ClockDivider
     generic map (MaxCount => 100000000) -- Counting to 100000000 gives a frequency of 1 hz
     port map (reset => inReset, clock => sigSystemClock, clockOut => sig1Hz);
-
-  compDisplayClock : ClockDivider
-    generic map (MaxCount => 400000)
-    port map (reset => inReset, clock => sigSystemClock, clockOut => sigDisplayClock);
+    
+  compClock250Hz : ClockDivider
+    generic map (MaxCount => 100000) -- Counting to 100000000 gives a frequency of 1 hz
+    port map (reset => inReset, clock => sigSystemClock, clockOut => sig1000Hz);
 
   comp9999Counter : Counter
-    generic map (genMaxCount => 9999)
-    port map (inClock => sig1Hz, inReset => inReset, outCount => sigCount);
+    generic map (genMaxCount => 10000)
+    port map (inClock => sigSelectedClock, inReset => inReset, outCount => sigCount);
 
   compDisplayDriver : DisplayDriver
     port map (inReset => inReset, inSelection => sigSegment, inNumber => sigCount, outDigit => outDigit);
 
   compSegmentCounter : Counter
     generic map (genMaxCount => 4)
-    port map (inClock => sigDisplayClock, inReset => inReset, outCount (1 downto 0) => sigSegment, outCount (13 downto 2) => open); -- Splits last two out... Look into doing with Logs
+    port map (inClock => sig1000Hz, inReset => inReset, outCount (1 downto 0) => sigSegment, outCount (13 downto 2) => open); -- Splits last two out... Look into doing with Logs
 
 ------
 --Other Wiring
@@ -146,6 +151,10 @@ begin
                           "1011" when "10",
                           "0111" when "11",
                           "1111" when others;
+                          
+  with inFast select
+    sigSelectedClock <= sig1Hz   when '0',
+                        sig1000Hz when '1';
 
 
 end Behavioral;

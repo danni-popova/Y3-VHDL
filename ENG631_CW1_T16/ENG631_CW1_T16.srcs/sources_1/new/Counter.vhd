@@ -33,7 +33,7 @@ use IEEE.numeric_std.all;
 --use UNISIM.VComponents.all;
 
 entity Counter is
-    Generic( genMaxCount : integer range 0 to 9999);
+    Generic( genMaxCount : integer range 1 to 10000);
     Port ( inClock : in STD_LOGIC;
            inReset : in STD_LOGIC;
            outCount : out STD_LOGIC_VECTOR (13 downto 0));

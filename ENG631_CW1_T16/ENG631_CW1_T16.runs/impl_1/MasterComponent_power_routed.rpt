@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Tue Nov 13 16:47:03 2018
+| Date             : Tue Nov 13 17:28:45 2018
 | Host             : W0DF5F8FBC19433 running 64-bit major release  (build 9200)
 | Command          : report_power -file MasterComponent_power_routed.rpt -pb MasterComponent_power_summary_routed.pb -rpx MasterComponent_power_routed.rpx
 | Design           : MasterComponent
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        8 |       --- |             --- |
-| Slice Logic    |     0.008 |      493 |       --- |             --- |
-|   LUT as Logic |     0.008 |      316 |     20800 |            1.52 |
-|   CARRY4       |    <0.001 |       41 |      8150 |            0.50 |
-|   Register     |    <0.001 |       65 |     41600 |            0.16 |
+| Slice Logic    |     0.008 |      490 |       --- |             --- |
+|   LUT as Logic |     0.008 |      321 |     20800 |            1.54 |
+|   CARRY4       |    <0.001 |       40 |      8150 |            0.49 |
+|   Register     |    <0.001 |       63 |     41600 |            0.15 |
 |   Others       |     0.000 |       13 |       --- |             --- |
-| Signals        |     0.007 |      451 |       --- |             --- |
+| Signals        |     0.007 |      449 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
-| I/O            |     0.025 |       14 |       106 |           13.21 |
+| I/O            |     0.025 |       15 |       106 |           14.15 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.219 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -73,7 +73,7 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.026 |       0.016 |      0.010 |
-| Vccaux    |       1.800 |     0.072 |       0.060 |      0.013 |
+| Vccaux    |       1.800 |     0.072 |       0.059 |      0.013 |
 | Vcco33    |       3.300 |     0.008 |       0.007 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -148,10 +148,10 @@ Table of Contents
 +--------------------------------+-----------+
 | MasterComponent                |     0.147 |
 |   comp9999Counter              |    <0.001 |
-|   compClock1Hz                 |    <0.001 |
+|   compClock1Hz                 |     0.001 |
+|   compClock250Hz               |    <0.001 |
 |   compClockManager             |     0.106 |
 |     inst                       |     0.106 |
-|   compDisplayClock             |    <0.001 |
 |   compDisplayDriver            |     0.013 |
 |     compBinaryDecimalConverter |     0.013 |
 |   compSegmentCounter           |    <0.001 |
