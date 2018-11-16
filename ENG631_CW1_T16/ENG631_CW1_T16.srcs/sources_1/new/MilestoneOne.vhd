@@ -6,9 +6,7 @@ entity MilestoneOne is
     Port ( inputClock : in STD_LOGIC;
            inputReset : in STD_LOGIC;
            inputFast : in STD_LOGIC;
-           --outputLEDs : out STD_LOGIC_VECTOR (15 downto 0);
            outputSegmentCathodes : out STD_LOGIC_VECTOR (6 downto 0);
-           --outputSegmentDP : out STD_LOGIC;
            outputSegmentAnodes : out STD_LOGIC_VECTOR (3 downto 0));
 end MilestoneOne;
 
@@ -183,19 +181,6 @@ begin
                                  "0000000" when 8,
                                  "0000100" when 9,
                                  "0000000" when others;
-    
---    with sigDisplayCount select 
---    outputSegmentCathodes <= "0000001" when 0, 
---                             "1001111" when 1, 
---                             "0010010" when 2,
---                             "0000110" when 3,
---                             "1001100" when 4,
---                             "0100100" when 5,
---                             "0100000" when 6,
---                             "0001111" when 7,
---                             "0000000" when 8,
---                             "0000100" when 9,
---                             "0000000" when others;
      
      with sigAnodesCounter select 
      sigAnodesPattern <= "1110" when 0,
@@ -206,7 +191,5 @@ begin
                          
     -- set anodes to the anodes pattern
      outputSegmentAnodes <= sigAnodesPattern;
-     
-     --outputSegmentAnodes <= "1111" when inputReset = '1' else "0000";
 
 end Behavioral;
