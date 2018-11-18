@@ -32,7 +32,7 @@ architecture Behavioral of MilestoneOne is
     signal sigAnodesPattern : std_logic_vector (3 downto 0);
     signal sigAnodesCounter : integer range 0 to 3;
     
-    type ta is array(0 to 3) of integer range 0 to 9999;
+    type ta is array(0 to 3) of integer range 0 to 9;
     signal sigDigitToDisplay: ta := (0, 0, 0, 0);
     
     -- DCM generated component declaration, copied from stub
