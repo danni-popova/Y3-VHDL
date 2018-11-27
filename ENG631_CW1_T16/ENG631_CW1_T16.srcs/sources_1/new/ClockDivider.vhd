@@ -41,21 +41,21 @@ end ClockDivider;
 architecture Behavioral of ClockDivider is
 
 --signals
-signal counter : integer range 0 to 400000000;
+shared variable counter : integer range 0 to 400000000;
 
 begin
 
     clockEnable : process (clock, reset)
     begin
         if reset = '1' then
-            counter <= 0;
+            counter := 0;
             clockOut <= '0'; --Check with Neils about this
         elsif rising_edge(clock) then
             clockOut <= '0'; --Check with Neils about this
             if counter < MaxCount - 1 then
-                counter <= counter + 1;
+                counter := counter + 1;
             else
-                counter <= 0;
+                counter := 0;
                 clockOut <= '1';
             end if;
         end if;

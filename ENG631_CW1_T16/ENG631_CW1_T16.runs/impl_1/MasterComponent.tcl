@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
@@ -68,7 +67,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/up782716/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8812-W0DF5F8FBC19433/incrSyn
+  set_param synth.incrementalSynthesisCache C:/Users/up780962/AppData/Local/Temp/.Xil_up780962/Vivado-10100-W0D819A1BC194A5/incrSyn
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]

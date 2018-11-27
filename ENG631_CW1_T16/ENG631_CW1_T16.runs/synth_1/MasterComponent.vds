@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue Nov 13 17:26:24 2018
-# Process ID: 8900
+# Start of session at: Tue Nov 27 12:45:46 2018
+# Process ID: 1660
 # Current directory: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1
 # Command line: vivado.exe -log MasterComponent.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MasterComponent.tcl
 # Log file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MasterComponent.vds
@@ -15,30 +15,32 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4948 
+INFO: Helper process launched with PID 8812 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 387.844 ; gain = 98.090
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 387.188 ; gain = 97.633
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-2519] partially associated formal outcount cannot have actual OPEN [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:142]
+WARNING: [Synth 8-2519] partially associated formal outcount cannot have actual OPEN [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:156]
 INFO: [Synth 8-638] synthesizing module 'MasterComponent' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:42]
-INFO: [Synth 8-3491] module 'ClockManager' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-8900-W0DF5F8FBC19433/realtime/ClockManager_stub.vhdl:5' bound to instance 'compClockManager' of component 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:122]
-INFO: [Synth 8-638] synthesizing module 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-8900-W0DF5F8FBC19433/realtime/ClockManager_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'ClockManager' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-1660-W0D819A1BC194A5/realtime/ClockManager_stub.vhdl:5' bound to instance 'compClockManager' of component 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:136]
+INFO: [Synth 8-638] synthesizing module 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-1660-W0D819A1BC194A5/realtime/ClockManager_stub.vhdl:15]
 	Parameter MaxCount bound to: 100000000 - type: integer 
-INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock1Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:125]
+INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock1Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:139]
 INFO: [Synth 8-638] synthesizing module 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
 	Parameter MaxCount bound to: 100000000 - type: integer 
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'ClockDivider' (1#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
 	Parameter MaxCount bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock250Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:129]
+INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock250Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:143]
 INFO: [Synth 8-638] synthesizing module 'ClockDivider__parameterized1' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
 	Parameter MaxCount bound to: 100000 - type: integer 
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'ClockDivider__parameterized1' (1#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
 	Parameter genMaxCount bound to: 10000 - type: integer 
-INFO: [Synth 8-3491] module 'Counter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:35' bound to instance 'comp9999Counter' of component 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:133]
+INFO: [Synth 8-3491] module 'Counter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:35' bound to instance 'comp9999Counter' of component 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:147]
 INFO: [Synth 8-638] synthesizing module 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
 	Parameter genMaxCount bound to: 10000 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'Counter' (2#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
-INFO: [Synth 8-3491] module 'DisplayDriver' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:34' bound to instance 'compDisplayDriver' of component 'DisplayDriver' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:137]
+INFO: [Synth 8-3491] module 'DisplayDriver' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:34' bound to instance 'compDisplayDriver' of component 'DisplayDriver' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:151]
 INFO: [Synth 8-638] synthesizing module 'DisplayDriver' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:41]
 INFO: [Synth 8-3491] module 'SegmentSelector' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:34' bound to instance 'compSegmentSelector' of component 'SegmentSelector' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:100]
 INFO: [Synth 8-638] synthesizing module 'SegmentSelector' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:39]
@@ -57,15 +59,15 @@ WARNING: [Synth 8-613] shared variable will be implemented as local to architect
 INFO: [Synth 8-256] done synthesizing module 'BinaryDecimalConverter' (5#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'DisplayDriver' (6#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:41]
 	Parameter genMaxCount bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'Counter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:35' bound to instance 'compSegmentCounter' of component 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:140]
+INFO: [Synth 8-3491] module 'Counter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:35' bound to instance 'compSegmentCounter' of component 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:154]
 INFO: [Synth 8-638] synthesizing module 'Counter__parameterized1' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
 	Parameter genMaxCount bound to: 4 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized1' (6#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
-INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:149]
+INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:163]
 INFO: [Synth 8-256] done synthesizing module 'MasterComponent' (7#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:42]
 WARNING: [Synth 8-3331] design DisplayDriver has unconnected port inReset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 440.668 ; gain = 150.914
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.625 ; gain = 151.070
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -78,10 +80,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 440.668 ; gain = 150.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.625 ; gain = 151.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 440.668 ; gain = 150.914
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.625 ; gain = 151.070
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -99,16 +101,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 776.250 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 776.289 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 776.250 ; gain = 486.496
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 776.289 ; gain = 486.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 776.250 ; gain = 486.496
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 776.289 ; gain = 486.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -117,10 +119,10 @@ Applied set_property IO_BUFFER_TYPE = NONE for inClock. (constraint file  n:/Git
 Applied set_property CLOCK_BUFFER_TYPE = NONE for inClock. (constraint file  n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager/ClockManager_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for compClockManager. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 776.250 ; gain = 486.496
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 776.289 ; gain = 486.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 776.250 ; gain = 486.496
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 776.289 ; gain = 486.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,7 +236,7 @@ INFO: [Synth 8-3886] merging instance 'i_0/compSegmentCounter/sigCounter_reg[11]
 INFO: [Synth 8-3886] merging instance 'i_0/compSegmentCounter/sigCounter_reg[13]' (FDC) to 'i_0/compSegmentCounter/sigCounter_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\compSegmentCounter/sigCounter_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 776.250 ; gain = 486.496
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 776.289 ; gain = 486.734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -248,13 +250,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'compClockManager/out100MHz' to pin 'compClockManager/bbstub_out100MHz/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 776.250 ; gain = 486.496
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 776.289 ; gain = 486.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 786.719 ; gain = 496.965
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 792.238 ; gain = 502.684
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -266,7 +268,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:45 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -290,7 +292,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -303,7 +305,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -315,25 +317,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -376,11 +378,11 @@ Report Instance Areas:
 |7     |  compSegmentCounter           |Counter__parameterized1      |    11|
 +------+-------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:47 . Memory (MB): peak = 806.336 ; gain = 516.582
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 806.336 ; gain = 181.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 806.336 ; gain = 516.582
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 811.613 ; gain = 186.395
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 811.613 ; gain = 522.059
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -390,10 +392,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-69 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+69 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:50 . Memory (MB): peak = 806.336 ; gain = 528.059
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 811.613 ; gain = 533.531
 INFO: [Common 17-1381] The checkpoint 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MasterComponent.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MasterComponent_utilization_synth.rpt -pb MasterComponent_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 806.336 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 13 17:27:28 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 811.613 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 12:46:45 2018...

@@ -42,7 +42,19 @@ end MasterComponent;
 architecture Behavioral of MasterComponent is
 
 --Component Declarations
-
+ 
+  ------
+  --Debouncer Component
+  ------
+  component Debouncer
+  
+  Port ( 
+    Input : in STD_LOGIC;
+    Output : out STD_LOGIC
+    );
+  
+  end component Debouncer;
+  
   ------
   --Counter Component
   ------
@@ -112,6 +124,8 @@ signal sigDisplayClock : std_logic;
 signal sigCount : std_logic_vector (13 downto 0);
 
 signal sigSegment : std_logic_vector (1 downto 0);
+
+signal sigResetPulse : std_logic;
 
 begin
 

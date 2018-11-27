@@ -1,8 +1,8 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Tue Nov 13 14:50:13 2018
-// Host        : W0DF5F8FBC19433 running 64-bit major release  (build 9200)
+// Date        : Tue Nov 27 11:27:47 2018
+// Host        : W0D819A1BC194A5 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager_stub.v
 // Design      : ClockManager
