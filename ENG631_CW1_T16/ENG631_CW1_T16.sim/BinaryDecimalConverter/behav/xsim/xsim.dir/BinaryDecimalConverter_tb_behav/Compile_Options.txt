@@ -1,0 +1,1 @@
+-wto "b0f5913b481d4a6d832ebffc204f7def" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "BinaryDecimalConverter_tb_behav" "xil_defaultlib.BinaryDecimalConverter_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
