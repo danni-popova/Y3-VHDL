@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd" \
+"../../../../ENG631_CW1_T16.srcs/SegmentSelector/new/SegmentSelector_tb.vhd" \
+
+# Do not sort compile order
+nosort
