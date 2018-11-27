@@ -10,7 +10,13 @@ entity DisplayDriver is
 
 architecture Behavioral of DisplayDriver is
 
-    -- signals declaration
+    -- Components 
+    
+        -- Segment Selector
+    
+        -- Multiplexer 
+        
+        -- Counter (Binary to decimal converter)
 
 begin
 

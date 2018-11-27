@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Oct 29 15:44:20 2018
-| Host         : W0D819A1BC194A5 running 64-bit major release  (build 9200)
+| Date         : Tue Nov 27 10:18:47 2018
+| Host         : chrispc running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MilestoneOne_control_sets_placed.rpt
 | Design       : MilestoneOne
 | Device       : xc7a35t
@@ -64,8 +64,8 @@ Table of Contents
 |  Demo_DCM/inst/clk_out1 |                                 |                                 |                1 |              2 |
 | ~Demo_DCM/inst/clk_out1 |                                 | inputReset_IBUF                 |                2 |              2 |
 |  Demo_DCM/inst/clk_out1 | sigClockEnable                  | sigDigitToDisplay[0][3]_i_1_n_0 |                1 |              4 |
-|  Demo_DCM/inst/clk_out1 | sigDigitToDisplay[2]            | sigDigitToDisplay[3]            |                1 |              4 |
 |  Demo_DCM/inst/clk_out1 | sigDigitToDisplay[1]            | sigDigitToDisplay[2]            |                1 |              4 |
+|  Demo_DCM/inst/clk_out1 | sigDigitToDisplay[2]            | sigDigitToDisplay[3]            |                1 |              4 |
 |  Demo_DCM/inst/clk_out1 | sigDigitToDisplay[0][3]_i_1_n_0 | sigDigitToDisplay[1]            |                2 |              4 |
 |  Demo_DCM/inst/clk_out1 |                                 | inputReset_IBUF                 |               12 |             45 |
 +-------------------------+---------------------------------+---------------------------------+------------------+----------------+

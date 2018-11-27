@@ -65,18 +65,17 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/wt [current_project]
-  set_property parent.project_path N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.xpr [current_project]
-  set_property ip_output_repo N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/wt [current_project]
+  set_property parent.project_path D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.xpr [current_project]
+  set_property ip_output_repo D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MilestoneOne.dcp
-  read_ip -quiet n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc
+  add_files -quiet D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MilestoneOne.dcp
+  read_ip -quiet D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc
   link_design -top MilestoneOne -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -149,25 +148,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
-  catch { write_mem_info -force MilestoneOne.mmi }
-  write_bitstream -force MilestoneOne.bit 
-  catch {write_debug_probes -quiet -force MilestoneOne}
-  catch {file copy -force MilestoneOne.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

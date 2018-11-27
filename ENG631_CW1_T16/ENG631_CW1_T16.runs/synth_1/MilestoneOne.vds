@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Mon Oct 29 15:42:32 2018
-# Process ID: 5856
-# Current directory: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1
+# Start of session at: Tue Nov 27 10:16:59 2018
+# Process ID: 6024
+# Current directory: D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1
 # Command line: vivado.exe -log MilestoneOne.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MilestoneOne.tcl
-# Log file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MilestoneOne.vds
-# Journal file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1\vivado.jou
+# Log file: D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MilestoneOne.vds
+# Journal file: D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source MilestoneOne.tcl -notrace
 Command: synth_design -top MilestoneOne -part xc7a35tcpg236-1
@@ -15,18 +15,18 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8676 
+INFO: Helper process launched with PID 7572 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 387.859 ; gain = 98.508
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 387.598 ; gain = 98.016
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'MilestoneOne' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:15]
-INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-5856-W0D819A1BC194A5/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Demo_DCM' of component 'clk_wiz_0' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-5856-W0D819A1BC194A5/realtime/clk_wiz_0_stub.vhdl:15]
-INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:199]
-WARNING: [Synth 8-6014] Unused sequential element sigDisplayCount_reg was removed.  [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:148]
-INFO: [Synth 8-256] done synthesizing module 'MilestoneOne' (1#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'MilestoneOne' [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:13]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-6024-chrispc/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'Demo_DCM' of component 'clk_wiz_0' [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-6024-chrispc/realtime/clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-226] default block is never used [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:186]
+WARNING: [Synth 8-6014] Unused sequential element sigDisplayCount_reg was removed.  [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'MilestoneOne' (1#1) [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MilestoneOne.vhd:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 442.758 ; gain = 153.406
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 442.363 ; gain = 152.781
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -39,50 +39,49 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 442.758 ; gain = 153.406
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 442.363 ; gain = 152.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 442.758 ; gain = 153.406
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 442.363 ; gain = 152.781
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Demo_DCM'
-Finished Parsing XDC File [n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Demo_DCM'
-Parsing XDC File [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc]
-Finished Parsing XDC File [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MilestoneOne_propImpl.xdc].
+Parsing XDC File [d:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Demo_DCM'
+Finished Parsing XDC File [d:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'Demo_DCM'
+Parsing XDC File [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc]
+Finished Parsing XDC File [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/MilestoneOne.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MilestoneOne_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/MilestoneOne_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 776.789 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 777.063 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 776.789 ; gain = 487.438
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 777.063 ; gain = 487.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 776.789 ; gain = 487.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 777.063 ; gain = 487.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for inputClock. (constraint file  n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for inputClock. (constraint file  n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for inputClock. (constraint file  d:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for inputClock. (constraint file  d:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for Demo_DCM. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:25 . Memory (MB): peak = 776.789 ; gain = 487.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 777.063 ; gain = 487.480
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "outputSegmentCathodes" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 776.789 ; gain = 487.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 777.063 ; gain = 487.480
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -102,9 +101,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input     14 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -122,9 +120,8 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input     14 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -142,7 +139,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 776.789 ; gain = 487.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 777.063 ; gain = 487.480
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -156,13 +153,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'Demo_DCM/clk_out1' to pin 'Demo_DCM/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 776.789 ; gain = 487.438
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 777.063 ; gain = 487.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 791.855 ; gain = 502.504
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 791.422 ; gain = 501.840
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -174,7 +171,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -198,7 +195,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -211,7 +208,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -223,25 +220,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -279,11 +276,11 @@ Report Instance Areas:
 |1     |top      |       |   197|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 793.008 ; gain = 169.625
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 793.008 ; gain = 503.656
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 793.332 ; gain = 169.051
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 793.332 ; gain = 503.750
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -293,10 +290,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-20 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+19 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 793.008 ; gain = 515.129
-INFO: [Common 17-1381] The checkpoint 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MilestoneOne.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 793.332 ; gain = 515.223
+INFO: [Common 17-1381] The checkpoint 'D:/University/VHDL/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MilestoneOne.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MilestoneOne_utilization_synth.rpt -pb MilestoneOne_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 793.008 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 29 15:43:30 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 793.332 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 27 10:17:47 2018...
