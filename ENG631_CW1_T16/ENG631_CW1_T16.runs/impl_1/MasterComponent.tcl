@@ -63,102 +63,14 @@ proc step_failed { step } {
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
-start_step init_design
-set ACTIVE_STEP init_design
-set rc [catch {
-  create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/up780962/AppData/Local/Temp/.Xil_up780962/Vivado-10100-W0D819A1BC194A5/incrSyn
-  set_param xicom.use_bs_reader 1
-  create_project -in_memory -part xc7a35tcpg236-1
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/wt [current_project]
-  set_property parent.project_path N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.xpr [current_project]
-  set_property ip_output_repo N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MasterComponent.dcp
-  read_ip -quiet N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager.xci
-  read_xdc N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/constrs_1/new/IO.xdc
-  link_design -top MasterComponent -part xc7a35tcpg236-1
-  close_msg_db -file init_design.pb
-} RESULT]
-if {$rc} {
-  step_failed init_design
-  return -code error $RESULT
-} else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force MasterComponent_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file MasterComponent_drc_opted.rpt -pb MasterComponent_drc_opted.pb -rpx MasterComponent_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-    implement_debug_core 
-  } 
-  place_design 
-  write_checkpoint -force MasterComponent_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file MasterComponent_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file MasterComponent_utilization_placed.rpt -pb MasterComponent_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file MasterComponent_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force MasterComponent_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file MasterComponent_drc_routed.rpt -pb MasterComponent_drc_routed.pb -rpx MasterComponent_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file MasterComponent_methodology_drc_routed.rpt -pb MasterComponent_methodology_drc_routed.pb -rpx MasterComponent_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file MasterComponent_power_routed.rpt -pb MasterComponent_power_summary_routed.pb -rpx MasterComponent_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file MasterComponent_route_status.rpt -pb MasterComponent_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file MasterComponent_timing_summary_routed.rpt -pb MasterComponent_timing_summary_routed.pb -rpx MasterComponent_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file MasterComponent_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file MasterComponent_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file route_report_bus_skew_0.rpt -rpx route_report_bus_skew_0.rpx"
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force MasterComponent_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
-  unset ACTIVE_STEP 
-}
-
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param synth.incrementalSynthesisCache C:/Users/up780962/AppData/Local/Temp/.Xil_up780962/Vivado-10100-W0D819A1BC194A5/incrSyn
+  set_param xicom.use_bs_reader 1
+  open_checkpoint MasterComponent_routed.dcp
+  set_property webtalk.parent_dir N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/wt [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force MasterComponent.mmi }
   write_bitstream -force MasterComponent.bit 
