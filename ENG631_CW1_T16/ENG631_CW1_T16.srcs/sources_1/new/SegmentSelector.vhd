@@ -1,35 +1,7 @@
-----------------------------------------------------------------------------------
--- Company:
--- Engineer:
---
--- Create Date: 10/24/2018 06:01:06 PM
--- Design Name:
--- Module Name: SegmentSelector - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
-
+--Team 16 - 780962 / 782716
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity SegmentSelector is
     Port ( inDecimal : in STD_LOGIC_VECTOR (3 downto 0);
@@ -40,6 +12,9 @@ architecture Behavioral of SegmentSelector is
 
 begin
 
+  --A lookup table that takes an input number, and turns on the corresponding
+  --bits on the 7-segment display
+  --Decimal point is the MSB
   with inDecimal select
     outSegments <=  "10000001" when "0000", -- 0
                     "11001111" when "0001", -- 1

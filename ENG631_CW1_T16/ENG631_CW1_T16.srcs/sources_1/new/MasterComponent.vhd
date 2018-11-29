@@ -1,35 +1,9 @@
-----------------------------------------------------------------------------------
--- Company:
--- Engineer:
---
--- Create Date: 23.10.2018 15:23:06
--- Design Name:
--- Module Name: MasterComponent - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
-
+--Team 16 - 780962 / 782716
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+--This is where all the components get wired together
 
 entity MasterComponent is
     Port ( inReset : in std_logic;
@@ -41,20 +15,20 @@ end MasterComponent;
 
 architecture Behavioral of MasterComponent is
 
---Component Declarations
- 
+  --Component Declarations
+
   ------
   --Debouncer Component
   ------
   component Debouncer
-  
-  Port ( 
+
+  Port (
     Input : in STD_LOGIC;
     Output : out STD_LOGIC
     );
-  
+
   end component Debouncer;
-  
+
   ------
   --Counter Component
   ------
@@ -139,13 +113,13 @@ begin
   compClock1Hz : ClockDivider
     generic map (MaxCount => 100000000) -- Counting to 100000000 gives a frequency of 1 hz
     port map (reset => inReset, clock => sigSystemClock, clockOut => sig1Hz);
-    
+
   compClock250Hz : ClockDivider
-    generic map (MaxCount => 100000) -- Counting to 100000000 gives a frequency of 1 hz
+    generic map (MaxCount => 100000) -- Counting to 100000 gives a frequency of 250 hz
     port map (reset => inReset, clock => sigSystemClock, clockOut => sig1000Hz);
 
   comp9999Counter : Counter
-    generic map (genMaxCount => 10000)
+    generic map (genMaxCount => 10000) --10000 digits, 0-9999 for the display
     port map (inClock => sigSelectedClock, inReset => inReset, outCount => sigCount);
 
   compDisplayDriver : DisplayDriver
@@ -159,13 +133,15 @@ begin
 --Other Wiring
 ------
 
+  --Simple MUX to select which segment is being displayed to
   with sigSegment select
     outSegmentSelector <= "1110" when "00",
                           "1101" when "01",
                           "1011" when "10",
                           "0111" when "11",
                           "1111" when others;
-                          
+
+  --Another simple MUX to choose which clock if FAST is selected
   with inFast select
     sigSelectedClock <= sig1Hz   when '0',
                         sig1000Hz when '1';

@@ -1,36 +1,8 @@
-----------------------------------------------------------------------------------
--- Company:
--- Engineer:
---
--- Create Date: 10/24/2018 06:01:06 PM
--- Design Name:
--- Module Name: BinaryDecimalConverter - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
-
+--Team 16 - 780962 / 782716
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity BinaryDecimalConverter is
     Port ( inBinaryNumber : in STD_LOGIC_VECTOR (13 downto 0);
@@ -55,15 +27,23 @@ architecture Behavioral of BinaryDecimalConverter is
 
 begin
 
+
+  --This converts the variable integers created and converts them to signals
   outUnits <= std_logic_vector(to_unsigned(sigUnits, outUnits'length));
   outTens <= std_logic_vector(to_unsigned(sigTens, outUnits'length));
   outHundreds <= std_logic_vector(to_unsigned(sigHundreds, outUnits'length));
   outThousands <= std_logic_vector(to_unsigned(sigThousands, outUnits'length));
 
+  --Whenever the input changes calculate the binary sigNumber
+  --A running total is used to keep divisions small, this way each step is identical
   procConverter : process (inBinaryNumber)
   begin
+    --Convert SLV input to an integer to be worked with
     sigNumber := to_integer(unsigned(inBinaryNumber));
 
+    --This step numeric value of the Least significant digit, it then removes it
+    --from the running total, this means each iteration breaks off the next sigNumber
+    --e.g. -> 1234 (4) -> 1230 -> 123 (3) -> 120 -> 12 (2) -> 10 -> 1 (1)
     sigUnits := sigNumber mod 10;
     sigNumber := (sigNumber - sigUnits) / 10;
 
