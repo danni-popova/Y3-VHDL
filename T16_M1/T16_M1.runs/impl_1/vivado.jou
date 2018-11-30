@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Nov 30 13:40:44 2018
+# Process ID: 7400
+# Current directory: D:/University/VHDL/Y3-VHDL/T16_M1/T16_M1.runs/impl_1
+# Command line: vivado.exe -log MasterComponent.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MasterComponent.tcl -notrace
+# Log file: D:/University/VHDL/Y3-VHDL/T16_M1/T16_M1.runs/impl_1/MasterComponent.vdi
+# Journal file: D:/University/VHDL/Y3-VHDL/T16_M1/T16_M1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source MasterComponent.tcl -notrace

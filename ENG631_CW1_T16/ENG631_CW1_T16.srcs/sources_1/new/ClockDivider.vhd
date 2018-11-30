@@ -37,8 +37,6 @@ begin
                 clockOut <= '1';
             end if;
         end if;
-
-
     end process clockEnable;
 
 end Behavioral;

@@ -1,0 +1,47 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Nov 30 13:41:18 2018
+| Host         : chrispc running 64-bit major release  (build 9200)
+| Command      : report_drc -file MasterComponent_drc_opted.rpt -pb MasterComponent_drc_opted.pb -rpx MasterComponent_drc_opted.rpx
+| Design       : MasterComponent
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT compClock250Hz/sigCounter[0]_i_2 is driving clock pin of 14 cells. This could lead to large hold time violations. First few involved cells are:
+    comp9999Counter/sigCounter_reg[4] {FDCE}
+    comp9999Counter/sigCounter_reg[0] {FDCE}
+    comp9999Counter/sigCounter_reg[10] {FDCE}
+    comp9999Counter/sigCounter_reg[11] {FDCE}
+    comp9999Counter/sigCounter_reg[12] {FDCE}
+
+Related violations: <none>
+
+
