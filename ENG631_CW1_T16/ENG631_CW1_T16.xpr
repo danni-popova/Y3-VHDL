@@ -20,11 +20,7 @@
     <Option Name="TargetLanguage" Val="VHDL"/>
     <Option Name="SimulatorLanguage" Val="VHDL"/>
     <Option Name="BoardPart" Val=""/>
-<<<<<<< HEAD
-    <Option Name="ActiveSimSet" Val="MUX4to1"/>
-=======
     <Option Name="ActiveSimSet" Val="BinaryDecimalConverter"/>
->>>>>>> 93d844e1a9cc8e93a79e174a7d1d4c4dc5590c84
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
@@ -37,11 +33,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-<<<<<<< HEAD
-    <Option Name="WTXSimLaunchSim" Val="26"/>
-=======
     <Option Name="WTXSimLaunchSim" Val="40"/>
->>>>>>> 93d844e1a9cc8e93a79e174a7d1d4c4dc5590c84
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -211,21 +203,13 @@
         <Option Name="SrcSet" Val=""/>
       </Config>
     </FileSet>
-<<<<<<< HEAD
-    <FileSet Name="MUX4to1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/MUX4to1">
-      <File Path="$PSRCDIR/sources_1/new/MUX4to1.vhd">
-=======
     <FileSet Name="BinaryDecimalConverter" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/BinaryDecimalConverter">
       <File Path="$PSRCDIR/sources_1/new/BinaryDecimalConverter.vhd">
->>>>>>> 93d844e1a9cc8e93a79e174a7d1d4c4dc5590c84
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-<<<<<<< HEAD
-      <File Path="$PSRCDIR/MUX4to1/new/MUX4to1_tb.vhd">
-=======
       <File Path="$PSRCDIR/BinaryDecimalConverter/new/BinaryDecimalConverter_tb.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -257,7 +241,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/SegmentSelector/new/SegmentSelector_tb.vhd">
->>>>>>> 93d844e1a9cc8e93a79e174a7d1d4c4dc5590c84
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -265,11 +248,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-<<<<<<< HEAD
-        <Option Name="TopModule" Val="MUX4to1_tb"/>
-=======
         <Option Name="TopModule" Val="SegmentSelector_tb"/>
->>>>>>> 93d844e1a9cc8e93a79e174a7d1d4c4dc5590c84
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
