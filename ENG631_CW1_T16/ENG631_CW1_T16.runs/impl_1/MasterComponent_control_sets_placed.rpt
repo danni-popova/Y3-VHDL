@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Feb  4 12:59:22 2019
+| Date         : Mon Feb  4 15:47:46 2019
 | Host         : W0D9A8A70C19943 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file MasterComponent_control_sets_placed.rpt
 | Design       : MasterComponent
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |    11 |
+| Number of unique control sets                            |     7 |
+| Unused register locations in slices containing registers |    34 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,10 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+|      1 |            1 |
+|      2 |            1 |
 |      3 |            1 |
+|      5 |            1 |
 |    16+ |            3 |
 +--------+--------------+
 
@@ -45,9 +48,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            8 |
-| No           | No                    | Yes                    |              49 |           19 |
-| No           | Yes                   | No                     |              20 |            9 |
+| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | Yes                    |             105 |           40 |
+| No           | Yes                   | No                     |              27 |           13 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -57,13 +60,16 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------+---------------+---------------------+------------------+----------------+
-|           Clock Signal           | Enable Signal |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
-+----------------------------------+---------------+---------------------+------------------+----------------+
-|  compClock250Hz/sig1000Hz        |               | compDebouncer/SR[0] |                1 |              3 |
-|  inClock_IBUF                    |               |                     |                8 |             16 |
-|  compClock250Hz/CLK              |               | compDebouncer/SR[0] |                9 |             20 |
-|  compClockManager/inst/out100MHz |               | compDebouncer/SR[0] |               18 |             46 |
-+----------------------------------+---------------+---------------------+------------------+----------------+
++----------------------------------+---------------+----------------------+------------------+----------------+
+|           Clock Signal           | Enable Signal |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++----------------------------------+---------------+----------------------+------------------+----------------+
+|  compClock2Hz/sigDataScroll_reg  |               | compDebouncer/reset  |                1 |              1 |
+|  inClock_IBUF_BUFG               |               |                      |                2 |              2 |
+|  compClock250Hz/sig1000Hz        |               | compDebouncer/reset  |                1 |              3 |
+|  compClock250Hz/CLK              |               | inReset_IBUF         |                2 |              5 |
+|  compClock250Hz/CLK              |               | compDebouncer/reset  |                8 |             23 |
+|  inClock_IBUF_BUFG               |               | compDebouncer/p_0_in |               13 |             27 |
+|  compClockManager/inst/out100MHz |               | compDebouncer/reset  |               28 |             73 |
++----------------------------------+---------------+----------------------+------------------+----------------+
 
 

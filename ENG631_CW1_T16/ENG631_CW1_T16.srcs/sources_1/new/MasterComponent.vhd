@@ -5,6 +5,7 @@ entity MasterComponent is
     Port ( inReset : in std_logic;
            inFast  : in  STD_LOGIC;
            inClock : in STD_LOGIC;
+           inSwitches : in STD_LOGIC_VECTOR (2 downto 0);
            outDigit : out STD_LOGIC_VECTOR (7 downto 0);
            outSegmentSelector :out STD_LOGIC_VECTOR (3 downto 0));
 end MasterComponent;
@@ -36,7 +37,7 @@ architecture Behavioral of MasterComponent is
   
   Port ( clock : in STD_LOGIC;
          reset : in STD_LOGIC;
-         oRandomNumber : out STD_LOGIC_VECTOR (13 downto 0));
+         oRandomNumber : out STD_LOGIC_VECTOR (3 downto 0));
   
   end component RandomNumberGenerator;
 
@@ -88,6 +89,40 @@ architecture Behavioral of MasterComponent is
              Input : in STD_LOGIC;
              Output : out STD_LOGIC);
   end component Debouncer;
+  
+  ---
+  --Segment Selector
+  ---
+  component SegmentSelector is
+      Port ( inDecimal : in STD_LOGIC_VECTOR (3 downto 0);
+             outSegments : out STD_LOGIC_VECTOR (7 downto 0));
+  end component SegmentSelector;
+  
+  ---
+  --Student number selector
+  ---
+  
+  component StudentNumber is
+  
+      Port(
+           inClock : in std_logic;
+           inReset : in std_logic;
+           inSetting : in std_logic_vector (2 downto 0);
+           outData : out std_logic_vector (3 downto 0));
+    
+  end component StudentNumber;
+  
+  ---
+  --Bit Splitter
+  ---
+  component compBitSplitter is
+      Port ( inBits : in STD_LOGIC_VECTOR (3 downto 0);
+             inClock : in std_logic;
+             inReset : in std_logic;
+             outMSB : out STD_LOGIC_VECTOR (3 downto 0);
+             outLSB : out STD_LOGIC_VECTOR (3 downto 0));
+  end component compBitSplitter;
+  
 
 
 --Signals
@@ -96,17 +131,32 @@ signal sigSystemClock : std_logic;
 
 signal sig1Hz : std_logic;
 
+signal sig2Hz : std_logic;
+
 signal sig1000Hz : std_logic;
 
 signal sigSelectedClock : std_logic;
 
 signal sigDisplayClock : std_logic;
 
-signal sigCount : std_logic_vector (13 downto 0);
+signal sigCount : std_logic_vector (3 downto 0);
 
 signal sigSegment : std_logic_vector (1 downto 0);
 
 signal sigResetPulse : std_logic;
+
+signal sigBinaryOut : std_logic_vector (3 downto 0);
+
+signal sigBinaryData : std_logic_vector (3 downto 0);
+
+signal sigLSB : std_logic_vector (3 downto 0);
+signal sigMSB : std_logic_vector (3 downto 0);
+
+signal sigData : std_logic_vector (3 downto 0);
+
+signal sigRNG : std_logic_vector (3 downto 0);
+
+signal sigStudentNumber : std_logic_vector (3 downto 0);
 
 begin
 
@@ -121,26 +171,39 @@ begin
     generic map (MaxCount => 100000000) -- Counting to 100000000 gives a frequency of 1 hz
     port map (reset => sigResetPulse, clock => sigSystemClock, clockOut => sig1Hz);
     
+  compClock2Hz : ClockDivider
+        generic map (MaxCount => 50000000) -- Counting to 100000000 gives a frequency of 1 hz
+        port map (reset => sigResetPulse, clock => sigSystemClock, clockOut => sig2Hz);
+    
   compClock250Hz : ClockDivider
     generic map (MaxCount => 100000) -- Counting to 100000000 gives a frequency of 1 hz
     port map (reset => sigResetPulse, clock => sigSystemClock, clockOut => sig1000Hz);
 
---  comp9999Counter : Counter
---    generic map (genMaxCount => 10000)
---    port map (inClock => sigSelectedClock, inReset => inReset, outCount => sigCount);
+  compFCounter : Counter
+    generic map (genMaxCount => 16)
+    port map (inClock => sigSelectedClock, inReset => inReset, outCount (3 downto 0) => sigCount, outCount (13 downto 4) => open);
 
-  compDisplayDriver : DisplayDriver
-    port map (inReset => sigResetPulse, inSelection => sigSegment, inNumber => sigCount, outDigit => outDigit);
+--  compDisplayDriver : DisplayDriver
+--    port map (inReset => sigResetPulse, inSelection => sigSegment, inNumber => sigCount, outDigit => outDigit);
 
   compSegmentCounter : Counter
     generic map (genMaxCount => 4)
     port map (inClock => sig1000Hz, inReset => sigResetPulse, outCount (1 downto 0) => sigSegment, outCount (13 downto 2) => open); -- Splits last two out... Look into doing with Logs
     
   compRNG : RandomNumberGenerator
-    port map (clock => sigSelectedClock, reset => sigResetPulse, oRandomNumber =>  sigCount);
+    port map (clock => sigSelectedClock, reset => sigResetPulse, oRandomNumber =>  sigRNG);
     
   compDebouncer : Debouncer
     port map (clock => inClock, input => inReset, output => sigResetPulse);
+    
+  compSegSelect : SegmentSelector
+    port map (inDecimal => sigBinaryOut, outSegments => outDigit);
+    
+  compStudentNumber : StudentNumber
+    port map (inClock => sigSelectedClock, inReset => sigResetPulse, inSetting => inSwitches, outData => sigStudentNumber);
+    
+  compBinaryDisplay : compBitSplitter
+    port map (inClock => sig2Hz, inBits => sigData, inReset => sigResetPulse, outMSB => sigMSB, outLSB => sigLSB);
 
 ------
 --Other Wiring
@@ -152,10 +215,28 @@ begin
                           "1011" when "10",
                           "0111" when "11",
                           "1111" when others;
+  
+  with sigSegment select --Multiplex to display
+    sigBinaryOut <=  sigLSB when "00",
+                     sigMSB when "01",
+                     sigData when "10",
+                     "0" & inSwitches when "11";
+                     
+    
+  
                           
   with inFast select
     sigSelectedClock <= sig1Hz   when '0',
                         sig1000Hz when '1';
-
+                          
+  with inSwitches select
+    sigData <= "0001" when "000",
+               "0111" when "001",
+               "1110" when "010",
+               "1000" when "011",
+               sigCount when "100",
+               sigRNG when "101",
+               sigStudentNumber when "110",
+               sigStudentNumber when "111";
 
 end Behavioral;

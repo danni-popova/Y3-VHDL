@@ -16,7 +16,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/up782716/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8224-W0D9A8A70C19943/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,14 +34,13 @@ set_property target_language VHDL [current_project]
 set_property ip_output_repo n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Debouncer.vhd
-  N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd
-  N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MUX4to1.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd
+  N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/StudentNumber.vhd
+  N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/compBitSplitter.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd
 }
 read_ip -quiet N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager.xci

@@ -41,7 +41,7 @@ end Debouncer;
 
 architecture Behavioral of Debouncer is
 
-shared variable highCount : integer range 0 to 10000;
+shared variable highCount : integer range 0 to 100000000;
 signal lastState : std_logic;
 
 begin
@@ -62,13 +62,13 @@ begin
               end if;
           end if;
           
-          if highCount = 9000 then
+          if highCount = 6250000 then
             Output <= '1';
           end if;
           
-          --if highCount > 9999 then 
-            --highCount := 0;
-          --end if;
+          if highCount > 99999999 then 
+            highCount := 0;
+          end if;
       end if;
       
     end process debounce;

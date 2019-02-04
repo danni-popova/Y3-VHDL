@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Mon Feb  4 12:57:27 2019
-# Process ID: 6840
+# Start of session at: Mon Feb  4 15:45:59 2019
+# Process ID: 8628
 # Current directory: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1
 # Command line: vivado.exe -log MasterComponent.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MasterComponent.tcl
 # Log file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MasterComponent.vds
@@ -15,63 +15,65 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2552 
+INFO: Helper process launched with PID 2900 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 387.645 ; gain = 98.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 387.352 ; gain = 98.121
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-2519] partially associated formal outcount cannot have actual OPEN [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:137]
-INFO: [Synth 8-638] synthesizing module 'MasterComponent' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:12]
-INFO: [Synth 8-3491] module 'ClockManager' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-6840-W0D9A8A70C19943/realtime/ClockManager_stub.vhdl:5' bound to instance 'compClockManager' of component 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:117]
-INFO: [Synth 8-638] synthesizing module 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-6840-W0D9A8A70C19943/realtime/ClockManager_stub.vhdl:15]
+WARNING: [Synth 8-2519] partially associated formal outcount cannot have actual OPEN [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:184]
+WARNING: [Synth 8-2519] partially associated formal outcount cannot have actual OPEN [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'MasterComponent' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:13]
+INFO: [Synth 8-3491] module 'ClockManager' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-8628-W0D9A8A70C19943/realtime/ClockManager_stub.vhdl:5' bound to instance 'compClockManager' of component 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'ClockManager' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/.Xil/Vivado-8628-W0D9A8A70C19943/realtime/ClockManager_stub.vhdl:15]
 	Parameter MaxCount bound to: 100000000 - type: integer 
-INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock1Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:120]
+INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock1Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:170]
 INFO: [Synth 8-638] synthesizing module 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
 	Parameter MaxCount bound to: 100000000 - type: integer 
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'ClockDivider' (1#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
-	Parameter MaxCount bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock250Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:124]
+	Parameter MaxCount bound to: 50000000 - type: integer 
+INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock2Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:174]
 INFO: [Synth 8-638] synthesizing module 'ClockDivider__parameterized1' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
-	Parameter MaxCount bound to: 100000 - type: integer 
+	Parameter MaxCount bound to: 50000000 - type: integer 
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'ClockDivider__parameterized1' (1#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
-INFO: [Synth 8-3491] module 'DisplayDriver' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:4' bound to instance 'compDisplayDriver' of component 'DisplayDriver' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:132]
-INFO: [Synth 8-638] synthesizing module 'DisplayDriver' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:11]
-INFO: [Synth 8-3491] module 'SegmentSelector' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:34' bound to instance 'compSegmentSelector' of component 'SegmentSelector' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:70]
-INFO: [Synth 8-638] synthesizing module 'SegmentSelector' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:39]
-INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'SegmentSelector' (2#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:39]
-INFO: [Synth 8-3491] module 'MUX4to1' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MUX4to1.vhd:34' bound to instance 'compMUX' of component 'MUX4to1' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'MUX4to1' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MUX4to1.vhd:43]
-INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MUX4to1.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'MUX4to1' (3#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MUX4to1.vhd:43]
-INFO: [Synth 8-3491] module 'BinaryDecimalConverter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:5' bound to instance 'compBinaryDecimalConverter' of component 'BinaryDecimalConverter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:76]
-INFO: [Synth 8-638] synthesizing module 'BinaryDecimalConverter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:13]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:18]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:19]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:20]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:21]
-WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'BinaryDecimalConverter' (4#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/BinaryDecimalConverter.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'DisplayDriver' (5#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/DisplayDriver.vhd:11]
-	Parameter genMaxCount bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'Counter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:35' bound to instance 'compSegmentCounter' of component 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:135]
+	Parameter MaxCount bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'ClockDivider' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:34' bound to instance 'compClock250Hz' of component 'ClockDivider' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'ClockDivider__parameterized3' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
+	Parameter MaxCount bound to: 100000 - type: integer 
+WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'ClockDivider__parameterized3' (1#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/ClockDivider.vhd:41]
+	Parameter genMaxCount bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'Counter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:35' bound to instance 'compFCounter' of component 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:182]
 INFO: [Synth 8-638] synthesizing module 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
+	Parameter genMaxCount bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter' (2#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
 	Parameter genMaxCount bound to: 4 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Counter' (6#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
-INFO: [Synth 8-3491] module 'RandomNumberGenerator' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd:4' bound to instance 'compRNG' of component 'RandomNumberGenerator' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:139]
+INFO: [Synth 8-3491] module 'Counter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:35' bound to instance 'compSegmentCounter' of component 'Counter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized1' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
+	Parameter genMaxCount bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized1' (2#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Counter.vhd:44]
+INFO: [Synth 8-3491] module 'RandomNumberGenerator' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd:4' bound to instance 'compRNG' of component 'RandomNumberGenerator' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:193]
 INFO: [Synth 8-638] synthesizing module 'RandomNumberGenerator' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd:12]
-WARNING: [Synth 8-6014] Unused sequential element newBit_reg was removed.  [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'RandomNumberGenerator' (7#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd:12]
-INFO: [Synth 8-3491] module 'Debouncer' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Debouncer.vhd:34' bound to instance 'compDebouncer' of component 'Debouncer' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:142]
+WARNING: [Synth 8-6014] Unused sequential element newBit_reg was removed.  [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'RandomNumberGenerator' (3#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/RandomNumberGenerator.vhd:12]
+INFO: [Synth 8-3491] module 'Debouncer' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Debouncer.vhd:34' bound to instance 'compDebouncer' of component 'Debouncer' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:196]
 INFO: [Synth 8-638] synthesizing module 'Debouncer' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Debouncer.vhd:42]
 WARNING: [Synth 8-613] shared variable will be implemented as local to architecture [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Debouncer.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'Debouncer' (8#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Debouncer.vhd:42]
-INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:150]
-INFO: [Synth 8-256] done synthesizing module 'MasterComponent' (9#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:12]
-WARNING: [Synth 8-3331] design DisplayDriver has unconnected port inReset
+INFO: [Synth 8-256] done synthesizing module 'Debouncer' (4#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/Debouncer.vhd:42]
+INFO: [Synth 8-3491] module 'SegmentSelector' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:34' bound to instance 'compSegSelect' of component 'SegmentSelector' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:199]
+INFO: [Synth 8-638] synthesizing module 'SegmentSelector' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:39]
+INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SegmentSelector' (5#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/SegmentSelector.vhd:39]
+INFO: [Synth 8-3491] module 'StudentNumber' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/StudentNumber.vhd:4' bound to instance 'compStudentNumber' of component 'StudentNumber' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:202]
+INFO: [Synth 8-638] synthesizing module 'StudentNumber' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/StudentNumber.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'StudentNumber' (6#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/StudentNumber.vhd:14]
+INFO: [Synth 8-3491] module 'compBitSplitter' declared at 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/compBitSplitter.vhd:34' bound to instance 'compBinaryDisplay' of component 'compBitSplitter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'compBitSplitter' [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/compBitSplitter.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'compBitSplitter' (7#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/compBitSplitter.vhd:42]
+INFO: [Synth 8-226] default block is never used [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:213]
+INFO: [Synth 8-256] done synthesizing module 'MasterComponent' (8#1) [N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/new/MasterComponent.vhd:13]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.336 ; gain = 150.797
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.512 ; gain = 151.281
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -84,10 +86,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.336 ; gain = 150.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.512 ; gain = 151.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.336 ; gain = 150.797
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 440.512 ; gain = 151.281
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -105,16 +107,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 777.309 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 776.125 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 777.309 ; gain = 487.770
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 776.125 ; gain = 486.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 777.309 ; gain = 487.770
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 776.125 ; gain = 486.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -123,11 +125,11 @@ Applied set_property IO_BUFFER_TYPE = NONE for inClock. (constraint file  n:/Git
 Applied set_property CLOCK_BUFFER_TYPE = NONE for inClock. (constraint file  n:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.srcs/sources_1/ip/ClockManager/ClockManager/ClockManager_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for compClockManager. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 777.309 ; gain = 487.770
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 776.125 ; gain = 486.895
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "Output" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "Output" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 777.309 ; gain = 487.770
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 776.125 ; gain = 486.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,25 +142,27 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     27 Bit       Adders := 1     
+	   2 Input     27 Bit       Adders := 2     
+	   2 Input     26 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   3 Input     15 Bit       Adders := 3     
-	   2 Input     14 Bit       Adders := 6     
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	               29 Bit    Registers := 2     
+	               29 Bit    Registers := 3     
+	               27 Bit    Registers := 1     
 	               20 Bit    Registers := 1     
-	               14 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	   2 Input     27 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 7     
+	   2 Input     26 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     14 Bit        Muxes := 9     
+	   6 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -169,7 +173,8 @@ Hierarchical RTL Component report
 Module MasterComponent 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	   8 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module ClockDivider 
 Detailed RTL Component Info : 
@@ -183,25 +188,21 @@ Detailed RTL Component Info :
 Module ClockDivider__parameterized1 
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     26 Bit       Adders := 1     
++---Registers : 
+	               29 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+Module ClockDivider__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
 	   2 Input     17 Bit       Adders := 1     
 +---Registers : 
 	               29 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     17 Bit        Muxes := 1     
-Module MUX4to1 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   4 Input      4 Bit        Muxes := 1     
-Module BinaryDecimalConverter 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     15 Bit       Adders := 3     
-	   2 Input     14 Bit       Adders := 5     
-	   2 Input      4 Bit       Adders := 1     
-+---Muxes : 
-	   2 Input     14 Bit        Muxes := 5     
-	   2 Input      4 Bit        Muxes := 1     
 Module RandomNumberGenerator 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -211,13 +212,29 @@ Detailed RTL Component Info :
 Module Debouncer 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     14 Bit       Adders := 1     
+	   2 Input     27 Bit       Adders := 1     
 +---Registers : 
-	               14 Bit    Registers := 1     
+	               27 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     14 Bit        Muxes := 4     
+	   2 Input     27 Bit        Muxes := 6     
 	   2 Input      1 Bit        Muxes := 1     
+Module StudentNumber 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   6 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module compBitSplitter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -234,7 +251,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5546] ROM "compDebouncer/Output" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "compDebouncer/Output" won't be mapped to RAM because address size (27) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'compClock2Hz/counter_reg[26]' (FDC) to 'compClock1Hz/counter_reg[28]'
+INFO: [Synth 8-3886] merging instance 'compClock2Hz/counter_reg[28]' (FDC) to 'compClock1Hz/counter_reg[28]'
+INFO: [Synth 8-3886] merging instance 'compClock2Hz/counter_reg[27]' (FDC) to 'compClock1Hz/counter_reg[28]'
 INFO: [Synth 8-3886] merging instance 'compClock1Hz/counter_reg[28]' (FDC) to 'compClock1Hz/counter_reg[27]'
 INFO: [Synth 8-3886] merging instance 'compClock1Hz/counter_reg[27]' (FDC) to 'compClock250Hz/counter_reg[28]'
 INFO: [Synth 8-3886] merging instance 'compClock250Hz/counter_reg[26]' (FDC) to 'compClock250Hz/counter_reg[28]'
@@ -250,6 +270,15 @@ INFO: [Synth 8-3886] merging instance 'compClock250Hz/counter_reg[20]' (FDC) to 
 INFO: [Synth 8-3886] merging instance 'compClock250Hz/counter_reg[21]' (FDC) to 'compClock250Hz/counter_reg[22]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\compClock250Hz/counter_reg[22] )
 WARNING: [Synth 8-3332] Sequential element (compClock250Hz/counter_reg[22]) is unused and will be removed from module MasterComponent.
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[5]' (FDC) to 'i_0/compFCounter/sigCounter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[8]' (FDC) to 'i_0/compFCounter/sigCounter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[7]' (FDC) to 'i_0/compFCounter/sigCounter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[9]' (FDC) to 'i_0/compFCounter/sigCounter_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[6]' (FDC) to 'i_0/compFCounter/sigCounter_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[12]' (FDC) to 'i_0/compFCounter/sigCounter_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[13]' (FDC) to 'i_0/compFCounter/sigCounter_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/compFCounter/sigCounter_reg[11]' (FDC) to 'i_0/compFCounter/sigCounter_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\compFCounter/sigCounter_reg[10] )
 INFO: [Synth 8-3886] merging instance 'i_0/compSegmentCounter/sigCounter_reg[3]' (FDC) to 'i_0/compSegmentCounter/sigCounter_reg[4]'
 INFO: [Synth 8-3886] merging instance 'i_0/compSegmentCounter/sigCounter_reg[10]' (FDC) to 'i_0/compSegmentCounter/sigCounter_reg[4]'
 INFO: [Synth 8-3886] merging instance 'i_0/compSegmentCounter/sigCounter_reg[8]' (FDC) to 'i_0/compSegmentCounter/sigCounter_reg[4]'
@@ -262,7 +291,7 @@ INFO: [Synth 8-3886] merging instance 'i_0/compSegmentCounter/sigCounter_reg[11]
 INFO: [Synth 8-3886] merging instance 'i_0/compSegmentCounter/sigCounter_reg[13]' (FDC) to 'i_0/compSegmentCounter/sigCounter_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\compSegmentCounter/sigCounter_reg[7] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 777.309 ; gain = 487.770
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 776.125 ; gain = 486.895
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -276,13 +305,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'compClockManager/out100MHz' to pin 'compClockManager/bbstub_out100MHz/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 777.309 ; gain = 487.770
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 776.125 ; gain = 486.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 789.930 ; gain = 500.391
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -294,7 +323,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -318,7 +347,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -331,7 +360,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -343,25 +372,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -379,41 +408,43 @@ Report Cell Usage:
 |      |Cell                |Count |
 +------+--------------------+------+
 |1     |ClockManager_bbox_0 |     1|
-|2     |CARRY4              |    40|
-|3     |LUT1                |    65|
+|2     |CARRY4              |    28|
+|3     |LUT1                |     1|
 |4     |LUT2                |     9|
-|5     |LUT3                |    65|
-|6     |LUT4                |    37|
-|7     |LUT5                |    58|
-|8     |LUT6                |   157|
-|9     |FDCE                |    49|
-|10    |FDRE                |    26|
-|11    |FDSE                |    10|
-|12    |IBUF                |     2|
+|5     |LUT3                |     9|
+|6     |LUT4                |    36|
+|7     |LUT5                |    28|
+|8     |LUT6                |    94|
+|9     |FDCE                |    95|
+|10    |FDPE                |    10|
+|11    |FDRE                |    29|
+|12    |IBUF                |     5|
 |13    |OBUF                |    12|
 +------+--------------------+------+
 
 Report Instance Areas: 
-+------+-------------------------------+-----------------------------+------+
-|      |Instance                       |Module                       |Cells |
-+------+-------------------------------+-----------------------------+------+
-|1     |top                            |                             |   532|
-|2     |  compClock1Hz                 |ClockDivider                 |    71|
-|3     |  compClock250Hz               |ClockDivider__parameterized1 |    45|
-|4     |  compDebouncer                |Debouncer                    |    40|
-|5     |  compDisplayDriver            |DisplayDriver                |   297|
-|6     |    compBinaryDecimalConverter |BinaryDecimalConverter       |   297|
-|7     |  compRNG                      |RandomNumberGenerator        |    52|
-|8     |  compSegmentCounter           |Counter                      |    11|
-+------+-------------------------------+-----------------------------+------+
++------+---------------------+-----------------------------+------+
+|      |Instance             |Module                       |Cells |
++------+---------------------+-----------------------------+------+
+|1     |top                  |                             |   358|
+|2     |  compBinaryDisplay  |compBitSplitter              |     2|
+|3     |  compClock1Hz       |ClockDivider                 |    71|
+|4     |  compClock250Hz     |ClockDivider__parameterized3 |    45|
+|5     |  compClock2Hz       |ClockDivider__parameterized1 |    69|
+|6     |  compDebouncer      |Debouncer                    |    83|
+|7     |  compFCounter       |Counter                      |    13|
+|8     |  compRNG            |RandomNumberGenerator        |    21|
+|9     |  compSegmentCounter |Counter__parameterized1      |    22|
+|10    |  compStudentNumber  |StudentNumber                |    13|
++------+---------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 785.180 ; gain = 495.949
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 811.148 ; gain = 184.637
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 811.148 ; gain = 521.609
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 785.180 ; gain = 160.336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 785.180 ; gain = 495.949
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
@@ -422,10 +453,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-76 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+90 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 811.148 ; gain = 533.082
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:45 . Memory (MB): peak = 785.180 ; gain = 507.418
 INFO: [Common 17-1381] The checkpoint 'N:/GitHub/Y3-VHDL/ENG631_CW1_T16/ENG631_CW1_T16.runs/synth_1/MasterComponent.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file MasterComponent_utilization_synth.rpt -pb MasterComponent_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 811.148 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Feb  4 12:58:27 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 785.180 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Feb  4 15:46:54 2019...
