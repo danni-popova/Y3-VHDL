@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549285039">
+  <File Type="PWROPT-DCP" Name="MasterComponent_pwropt.dcp"/>
+  <File Type="ROUTE-PWR" Name="MasterComponent_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="MasterComponent.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="MasterComponent_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="MasterComponent_reports.tcl"/>
+  <File Type="BG-DRC" Name="MasterComponent.drc"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="MasterComponent_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="MasterComponent_timing_summary_init.rpt"/>
+  <File Type="OPT-HWDEF" Name="MasterComponent.hwdef"/>
+  <File Type="OPT-DCP" Name="MasterComponent_opt.dcp"/>
+  <File Type="OPT-DRC" Name="MasterComponent_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="MasterComponent_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DRC" Name="MasterComponent_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="MasterComponent_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="MasterComponent_placed.dcp"/>
+  <File Type="PLACE-IO" Name="MasterComponent_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="MasterComponent_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="MasterComponent_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="MasterComponent_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="MasterComponent_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="MasterComponent_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="MasterComponent_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="MasterComponent_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="MasterComponent_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="MasterComponent_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="MasterComponent_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="MasterComponent_drc_physopted.rpt"/>
+  <File Type="BG-BIT" Name="MasterComponent.bit"/>
+  <File Type="PHYSOPT-TIMING" Name="MasterComponent_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="MasterComponent_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="MasterComponent_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="MasterComponent_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="MasterComponent_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="MasterComponent_drc_routed.pb"/>
+  <File Type="BITSTR-MSK" Name="MasterComponent.msk"/>
+  <File Type="ROUTE-DRC-RPX" Name="MasterComponent_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="MasterComponent.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="MasterComponent_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="MasterComponent.rbt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="MasterComponent_methodology_drc_routed.rpx"/>
+  <File Type="BG-BIN" Name="MasterComponent.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="MasterComponent_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="MasterComponent_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="MasterComponent_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="MasterComponent_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="MasterComponent_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="MasterComponent_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="MasterComponent_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="MasterComponent_incremental_reuse_routed.rpt"/>
+  <File Type="RDI-RDI" Name="MasterComponent.vdi"/>
+  <File Type="ROUTE-CLK" Name="MasterComponent_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="MasterComponent_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="MasterComponent_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="MasterComponent_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="MasterComponent_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="MasterComponent_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="MasterComponent.nky"/>
+  <File Type="BITSTR-BMM" Name="MasterComponent_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="MasterComponent.mmi"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="MasterComponent.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="MasterComponent.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/BinaryDecimalConverter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ClockDivider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Debouncer.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DisplayDriver.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX4to1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RandomNumberGenerator.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SegmentSelector.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MasterComponent.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="MasterComponent"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/IO.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/IO.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ClockManager"/>
+</GenRun>

@@ -1,0 +1,53 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Mon Feb  4 12:59:46 2019
+| Host         : W0D9A8A70C19943 running 64-bit major release  (build 9200)
+| Command      : report_drc -file MasterComponent_drc_routed.rpt -pb MasterComponent_drc_routed.pb -rpx MasterComponent_drc_routed.rpx
+| Design       : MasterComponent
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net compClock250Hz/CLK is a gated clock net sourced by a combinational pin compClock250Hz/sSeed[19]_i_2/O, cell compClock250Hz/sSeed[19]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT compClock250Hz/sSeed[19]_i_2 is driving clock pin of 20 cells. This could lead to large hold time violations. First few involved cells are:
+    compRNG/sSeed_reg[12] {FDRE}
+    compRNG/sSeed_reg[0] {FDRE}
+    compRNG/sSeed_reg[10] {FDRE}
+    compRNG/sSeed_reg[11] {FDSE}
+    compRNG/sSeed_reg[13] {FDSE}
+
+Related violations: <none>
+
+

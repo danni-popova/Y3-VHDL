@@ -37,26 +37,40 @@ entity Debouncer is
            Output : out STD_LOGIC);
 end Debouncer;
 
+
+
 architecture Behavioral of Debouncer is
 
-    shared variable lastState : std_logic;
+shared variable highCount : integer range 0 to 10000;
+signal lastState : std_logic;
 
 begin
 
 
 
-
-
     debounce : process (input, clock)    
     begin
-    
-        if rising_edge (input) then
-            output <= input;
-        else
-            output <= '0';
-        end if;   
-            
-    
+      if rising_edge(clock) then
+          output <= '0';
+          lastState <= input;
+          
+          if input = '1' then
+              if lastState = input then 
+                highCount := highCount + 1;
+              else 
+                highCount := 0;
+              end if;
+          end if;
+          
+          if highCount = 9000 then
+            Output <= '1';
+          end if;
+          
+          --if highCount > 9999 then 
+            --highCount := 0;
+          --end if;
+      end if;
+      
     end process debounce;
 
 end Behavioral;
