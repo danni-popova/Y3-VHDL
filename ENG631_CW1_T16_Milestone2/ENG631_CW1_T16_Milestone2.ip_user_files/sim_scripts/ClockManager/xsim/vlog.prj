@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../ENG631_CW1_T16_Milestone2.srcs/sources_1/ip/ClockManager/ClockManager_clk_wiz.v" \
+"../../../../ENG631_CW1_T16_Milestone2.srcs/sources_1/ip/ClockManager/ClockManager.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

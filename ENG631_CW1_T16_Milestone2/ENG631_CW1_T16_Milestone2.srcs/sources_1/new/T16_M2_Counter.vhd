@@ -1,3 +1,5 @@
+-- Team 16 - 782716, 780962
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
@@ -8,8 +10,6 @@ entity Counter is
            inReset : in STD_LOGIC;
            outCount : out STD_LOGIC_VECTOR (13 downto 0));
 end Counter;
-
-
 
 architecture Behavioral of Counter is
 
