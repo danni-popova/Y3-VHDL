@@ -16,7 +16,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/up780962/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4828-W0DA01E54C1964C/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -35,6 +38,7 @@ read_vhdl -library xil_defaultlib {
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Clock_Divider.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Counter.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Debouncer.vhd
+  N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_On_Off_Switch.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Random_Number_Generator.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Segment_Selector.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Student_Number.vhd

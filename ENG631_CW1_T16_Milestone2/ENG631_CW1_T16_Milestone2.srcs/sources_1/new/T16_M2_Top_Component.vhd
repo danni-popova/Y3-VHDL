@@ -8,8 +8,10 @@ entity TopComponent is
            inFast : in STD_LOGIC;
            inClock : in STD_LOGIC;
            inSwitches : in STD_LOGIC_VECTOR (2 downto 0);
+           inOnOff : in STD_Logic;
            outDigit : out STD_LOGIC_VECTOR (7 downto 0);
-           outSegmentSelector : out STD_LOGIC_VECTOR (3 downto 0));
+           outSegmentSelector : out STD_LOGIC_VECTOR (3 downto 0);
+           outRunning : out std_logic);
 end TopComponent;
 
 architecture Behavioral of TopComponent is
@@ -128,6 +130,16 @@ architecture Behavioral of TopComponent is
              outResetPulse : out STD_LOGIC);
   end component T16_M2_Switch_Change_Reset;
   
+  ---
+  -- On/Off switch
+  ---
+  
+  component T16_M2_On_Off_Switch is
+      Port ( inClock : in std_logic;
+             inPulse : in STD_LOGIC;
+             outState : out STD_LOGIC);
+  end component T16_M2_On_Off_Switch;
+  
 --Signals
 
 signal sigSystemClock : std_logic;
@@ -165,6 +177,12 @@ signal sigAutoReset : std_logic;
 
 signal sigResetButton : std_logic;
 
+signal sigRunning : std_logic;
+
+signal sigOnOffButton : std_Logic;
+
+signal sigDisplayOut : std_logic_vector (3 downto 0);
+
 begin
 
 ------
@@ -189,7 +207,7 @@ begin
 
   compFCounter : Counter
     generic map (genMaxCount => 16)
-    port map (inClock => sigSelectedClock, inReset => inReset, outCount (3 downto 0) => sigCount, outCount (13 downto 4) => open);
+    port map (inClock => sigSelectedClock, inReset => sigResetPulse, outCount (3 downto 0) => sigCount, outCount (13 downto 4) => open);
 
   compSegmentCounter : Counter
     generic map (genMaxCount => 4)
@@ -198,11 +216,14 @@ begin
   compRNG : RandomNumberGenerator
     port map (clock => sigSelectedClock, reset => sigResetPulse, oRandomNumber =>  sigRNG);
     
-  compDebouncer : Debouncer
+  compResetDebouncer : Debouncer
     port map (clock => inClock, input => inReset, output => sigResetButton);
     
+  compOnOffDebouncer : Debouncer
+    port map (clock => inClock, input => inOnOff, output => sigOnOffButton);
+    
   compSegSelect : SegmentSelector
-    port map (inDecimal => sigBinaryOut, outSegments => outDigit);
+    port map (inDecimal => sigDisplayOut, outSegments => outDigit);
     
   compStudentNumber : StudentNumber
     port map (inClock => sigSelectedClock, inReset => sigResetPulse, inSetting => inSwitches, outData => sigStudentNumber);
@@ -212,6 +233,9 @@ begin
     
   compChangeReset : T16_M2_Switch_Change_Reset
     port map (inClock => sigSystemClock, inSwitches => inSwitches, outResetPulse => sigAutoReset);
+    
+  compOnOff : T16_M2_On_Off_Switch
+    port map (inClock => sigSystemClock, inPulse => sigOnOffButton, outState => sigRunning);
 
 ------
 --Other Wiring
@@ -229,10 +253,14 @@ begin
                      sigMSB when "01",
                      sigData when "10",
                      "0" & inSwitches when "11";
+                    
+  with sigRunning select
+    sigDisplayOut <= "0000" when '0',
+                     sigBinaryOut when '1';   
                      
-  with inFast select
-    sigSelectedClock <= sig1Hz   when '0',
-                        sig1000Hz when '1';
+  with sigRunning select
+    sigSelectedClock <= sig1Hz   when '1',
+                        '0'      when '0';
                           
   with inSwitches select
     sigData <= "0001" when "000",
@@ -245,5 +273,7 @@ begin
                sigStudentNumber when "111";
                
   sigResetPulse <= sigAutoReset OR sigResetButton;
+  
+  outRunning <= sigRunning;
 
 end Behavioral;

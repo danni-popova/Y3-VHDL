@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Tue Feb  5 12:52:52 2019
+| Date         : Tue Feb  5 14:47:14 2019
 | Host         : W0DA01E54C1964C running 64-bit major release  (build 9200)
 | Command      : report_drc -file TopComponent_drc_routed.rpt -pb TopComponent_drc_routed.pb -rpx TopComponent_drc_routed.rpx
 | Design       : TopComponent
@@ -36,16 +36,16 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net compClock250Hz/CLK is a gated clock net sourced by a combinational pin compClock250Hz/signalCounter[2]_i_2/O, cell compClock250Hz/signalCounter[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net compOnOff/CLK is a gated clock net sourced by a combinational pin compOnOff/signalCounter[2]_i_2/O, cell compOnOff/signalCounter[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT compClock250Hz/signalCounter[2]_i_2 is driving clock pin of 28 cells. This could lead to large hold time violations. First few involved cells are:
-    compFCounter/sigCounter_reg[2] {FDCE}
-    compFCounter/sigCounter_reg[4] {FDCE}
+A LUT compOnOff/signalCounter[2]_i_2 is driving clock pin of 28 cells. This could lead to large hold time violations. First few involved cells are:
     compFCounter/sigCounter_reg[0] {FDCE}
     compFCounter/sigCounter_reg[1] {FDCE}
+    compFCounter/sigCounter_reg[2] {FDCE}
+    compFCounter/sigCounter_reg[4] {FDCE}
     compFCounter/sigCounter_reg[3] {FDCE}
 
 Related violations: <none>

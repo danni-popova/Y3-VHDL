@@ -11,12 +11,12 @@ end Debouncer;
 
 architecture Behavioral of Debouncer is
 
-shared variable highCount : integer range 0 to 100000000;
+shared variable highCount : integer range 0 to 1000000000;
 signal lastState : std_logic;
 
 begin
 
-    debounce : process (input, clock)    
+    debounce : process (clock)    
     begin
       if rising_edge(clock) then
           output <= '0';
@@ -30,11 +30,11 @@ begin
               end if;
           end if;
           
-          if highCount = 6250000 then
+          if highCount = 20000000 then
             Output <= '1';
           end if;
           
-          if highCount > 99999999 then 
+          if highCount > 100000000 then 
             highCount := 0;
           end if;
       end if;

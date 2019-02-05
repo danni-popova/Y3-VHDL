@@ -28,7 +28,7 @@ set_property PACKAGE_PIN V5 [get_ports {outDigit[1]}]
 set_property PACKAGE_PIN U7 [get_ports {outDigit[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports inReset]
-set_property PACKAGE_PIN U18 [get_ports inReset]
+set_property PACKAGE_PIN T17 [get_ports inReset]
 
 create_clock -period 10.000 -name C100Mhz_pin -waveform {0.000 5.000} -add [get_ports inClock]
 
@@ -47,3 +47,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports {inSwitches[0]}]
 set_property PACKAGE_PIN R2 [get_ports {inSwitches[2]}]
 set_property PACKAGE_PIN T1 [get_ports {inSwitches[1]}]
 set_property PACKAGE_PIN U1 [get_ports {inSwitches[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports inOnOff]
+set_property PACKAGE_PIN W19 [get_ports inOnOff]
+
+set_property IOSTANDARD LVCMOS33 [get_ports outRunning]
+set_property PACKAGE_PIN L1 [get_ports outRunning]

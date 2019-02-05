@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Tue Feb  5 12:52:24 2019
+| Date         : Tue Feb  5 14:46:45 2019
 | Host         : W0DA01E54C1964C running 64-bit major release  (build 9200)
 | Command      : report_drc -file TopComponent_drc_opted.rpt -pb TopComponent_drc_opted.pb -rpx TopComponent_drc_opted.rpx
 | Design       : TopComponent
@@ -35,11 +35,11 @@ Table of Contents
 -----------------
 PLHOLDVIO-2#1 Warning
 Non-Optimal connections which could lead to hold violations  
-A LUT compClock250Hz/signalCounter[2]_i_2 is driving clock pin of 28 cells. This could lead to large hold time violations. First few involved cells are:
-    compFCounter/sigCounter_reg[2] {FDCE}
-    compFCounter/sigCounter_reg[4] {FDCE}
+A LUT compOnOff/signalCounter[2]_i_2 is driving clock pin of 28 cells. This could lead to large hold time violations. First few involved cells are:
     compFCounter/sigCounter_reg[0] {FDCE}
     compFCounter/sigCounter_reg[1] {FDCE}
+    compFCounter/sigCounter_reg[2] {FDCE}
+    compFCounter/sigCounter_reg[4] {FDCE}
     compFCounter/sigCounter_reg[3] {FDCE}
 
 Related violations: <none>

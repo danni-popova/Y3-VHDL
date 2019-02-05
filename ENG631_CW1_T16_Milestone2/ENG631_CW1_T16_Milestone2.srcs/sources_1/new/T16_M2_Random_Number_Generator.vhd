@@ -13,7 +13,7 @@ end RandomNumberGenerator;
 
 architecture Behavioral of RandomNumberGenerator is
 
-signal sSeed: STD_LOGIC_VECTOR(19 downto 0) := "10101010101010101010";
+signal sSeed: STD_LOGIC_VECTOR(19 downto 0) := "10011011010111010000";
 
 begin
 
@@ -24,7 +24,7 @@ begin
     BEGIN
     
         if reset = '1' then
-            sSeed <= "10101010101010101010";
+            sSeed <= "10011011010111010000";
         elsif rising_edge(clock) then
                 --From xilinx paper, with a 20 bit number, XNOR bits 20 and 19 (However that is starting from one)
             newBit := sSeed(19) XNOR sSeed(16);

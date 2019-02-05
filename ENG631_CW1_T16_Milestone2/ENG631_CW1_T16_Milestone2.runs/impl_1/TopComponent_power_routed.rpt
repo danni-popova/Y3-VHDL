@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Tue Feb  5 12:52:54 2019
+| Date             : Tue Feb  5 14:47:15 2019
 | Host             : W0DA01E54C1964C running 64-bit major release  (build 9200)
 | Command          : report_power -file TopComponent_power_routed.rpt -pb TopComponent_power_summary_routed.pb -rpx TopComponent_power_routed.rpx
 | Design           : TopComponent
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.192        |
+| Total On-Chip Power (W)  | 0.188        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.120        |
+| Dynamic (W)              | 0.116        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      368 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      166 |     20800 |            0.80 |
-|   CARRY4       |    <0.001 |       28 |      8150 |            0.34 |
-|   Register     |    <0.001 |      138 |     41600 |            0.33 |
-|   Others       |     0.000 |       21 |       --- |             --- |
-| Signals        |    <0.001 |      338 |       --- |             --- |
+| Clocks         |     0.003 |        6 |       --- |             --- |
+| Slice Logic    |    <0.001 |      488 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      230 |     20800 |            1.11 |
+|   CARRY4       |    <0.001 |       37 |      8150 |            0.45 |
+|   Register     |    <0.001 |      174 |     41600 |            0.42 |
+|   Others       |     0.000 |       25 |       --- |             --- |
+| Signals        |    <0.001 |      463 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
-| I/O            |     0.011 |       18 |       106 |           16.98 |
+| I/O            |     0.006 |       19 |       106 |           17.92 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.192 |          |           |                 |
+| Total          |     0.188 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |
-| Vccaux    |       1.800 |     0.072 |       0.059 |      0.013 |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
+| Vccint    |       1.000 |     0.015 |       0.005 |      0.010 |
+| Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,7 +144,7 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| TopComponent         |     0.120 |
+| TopComponent         |     0.116 |
 |   compBinaryDisplay  |    <0.001 |
 |   compChangeReset    |    <0.001 |
 |   compClock1Hz       |    <0.001 |
@@ -152,9 +152,11 @@ Table of Contents
 |   compClock2Hz       |    <0.001 |
 |   compClockManager   |     0.106 |
 |     inst             |     0.106 |
-|   compDebouncer      |    <0.001 |
 |   compFCounter       |    <0.001 |
+|   compOnOff          |    <0.001 |
+|   compOnOffDebouncer |    <0.001 |
 |   compRNG            |    <0.001 |
+|   compResetDebouncer |    <0.001 |
 |   compSegmentCounter |    <0.001 |
 |   compStudentNumber  |    <0.001 |
 +----------------------+-----------+
