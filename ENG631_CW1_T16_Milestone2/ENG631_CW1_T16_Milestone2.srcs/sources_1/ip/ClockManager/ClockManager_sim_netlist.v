@@ -1,11 +1,11 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-// Date        : Tue Feb  5 10:17:54 2019
-// Host        : DESKTOP-4GJG85N running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top ClockManager -prefix
-//               ClockManager_ clk_wiz_0_sim_netlist.v
-// Design      : clk_wiz_0
+// Date        : Tue Feb  5 11:01:39 2019
+// Host        : W0DA01E54C1964C running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/ip/ClockManager/ClockManager_sim_netlist.v
+// Design      : ClockManager
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a35tcpg236-1
@@ -14,44 +14,45 @@
 
 (* NotValidForBitStream *)
 module ClockManager
-   (clk_out1,
+   (out100mhz,
     reset,
     locked,
-    clk_in1);
-  output clk_out1;
+    in100mhz);
+  output out100mhz;
   input reset;
   output locked;
-  input clk_in1;
+  input in100mhz;
 
-  (* IBUF_LOW_PWR *) wire clk_in1;
-  wire clk_out1;
+  (* IBUF_LOW_PWR *) wire in100mhz;
   wire locked;
+  wire out100mhz;
   wire reset;
 
-  ClockManager_clk_wiz_0_clk_wiz inst
-       (.clk_in1(clk_in1),
-        .clk_out1(clk_out1),
+  ClockManager_ClockManager_clk_wiz inst
+       (.in100mhz(in100mhz),
         .locked(locked),
+        .out100mhz(out100mhz),
         .reset(reset));
 endmodule
 
-module ClockManager_clk_wiz_0_clk_wiz
-   (clk_out1,
+(* ORIG_REF_NAME = "ClockManager_clk_wiz" *) 
+module ClockManager_ClockManager_clk_wiz
+   (out100mhz,
     reset,
     locked,
-    clk_in1);
-  output clk_out1;
+    in100mhz);
+  output out100mhz;
   input reset;
   output locked;
-  input clk_in1;
+  input in100mhz;
 
-  wire clk_in1;
-  wire clk_in1_clk_wiz_0;
-  wire clk_out1;
-  wire clk_out1_clk_wiz_0;
-  wire clkfbout_buf_clk_wiz_0;
-  wire clkfbout_clk_wiz_0;
+  wire clkfbout_ClockManager;
+  wire clkfbout_buf_ClockManager;
+  wire in100mhz;
+  wire in100mhz_ClockManager;
   wire locked;
+  wire out100mhz;
+  wire out100mhz_ClockManager;
   wire reset;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
@@ -72,8 +73,8 @@ module ClockManager_clk_wiz_0_clk_wiz
 
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkf_buf
-       (.I(clkfbout_clk_wiz_0),
-        .O(clkfbout_buf_clk_wiz_0));
+       (.I(clkfbout_ClockManager),
+        .O(clkfbout_buf_ClockManager));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
@@ -81,12 +82,12 @@ module ClockManager_clk_wiz_0_clk_wiz
   IBUF #(
     .IOSTANDARD("DEFAULT")) 
     clkin1_ibufg
-       (.I(clk_in1),
-        .O(clk_in1_clk_wiz_0));
+       (.I(in100mhz),
+        .O(in100mhz_ClockManager));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(clk_out1_clk_wiz_0),
-        .O(clk_out1));
+       (.I(out100mhz_ClockManager),
+        .O(out100mhz));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -138,15 +139,15 @@ module ClockManager_clk_wiz_0_clk_wiz
     .SS_MOD_PERIOD(10000),
     .STARTUP_WAIT("FALSE")) 
     mmcm_adv_inst
-       (.CLKFBIN(clkfbout_buf_clk_wiz_0),
-        .CLKFBOUT(clkfbout_clk_wiz_0),
+       (.CLKFBIN(clkfbout_buf_ClockManager),
+        .CLKFBOUT(clkfbout_ClockManager),
         .CLKFBOUTB(NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED),
         .CLKFBSTOPPED(NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED),
-        .CLKIN1(clk_in1_clk_wiz_0),
+        .CLKIN1(in100mhz_ClockManager),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(clk_out1_clk_wiz_0),
+        .CLKOUT0(out100mhz_ClockManager),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
         .CLKOUT1(NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),

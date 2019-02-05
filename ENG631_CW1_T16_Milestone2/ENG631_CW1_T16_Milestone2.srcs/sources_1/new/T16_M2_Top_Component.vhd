@@ -118,6 +118,16 @@ architecture Behavioral of TopComponent is
              outLSB : out STD_LOGIC_VECTOR (3 downto 0));
   end component BitSplitter;
   
+  ----
+  -- Reset Pulse Generator
+  ----
+  
+  component T16_M2_Switch_Change_Reset is
+      Port ( inClock : in STD_LOGIC;
+             inSwitches : in STD_LOGIC_VECTOR (2 downto 0);
+             outResetPulse : out STD_LOGIC);
+  end component T16_M2_Switch_Change_Reset;
+  
 --Signals
 
 signal sigSystemClock : std_logic;
@@ -151,6 +161,10 @@ signal sigRNG : std_logic_vector (3 downto 0);
 
 signal sigStudentNumber : std_logic_vector (3 downto 0);
 
+signal sigAutoReset : std_logic;
+
+signal sigResetButton : std_logic;
+
 begin
 
 ------
@@ -159,7 +173,7 @@ begin
 
 --Connect ClockManager between input and system clocks
   compClockManager : ClockManager
-    port map (out100MHz => sigSystemClock, in100MHz => inClock, reset => sigResetPulse, locked => open);
+    port map (out100MHz => sigSystemClock, in100MHz => inClock, reset => '0', locked => open);
 
   compClock1Hz : ClockDivider
     generic map (MaxCount => 100000000) -- Counting to 100000000 gives a frequency of 1 hz
@@ -177,9 +191,6 @@ begin
     generic map (genMaxCount => 16)
     port map (inClock => sigSelectedClock, inReset => inReset, outCount (3 downto 0) => sigCount, outCount (13 downto 4) => open);
 
---  compDisplayDriver : DisplayDriver
---    port map (inReset => sigResetPulse, inSelection => sigSegment, inNumber => sigCount, outDigit => outDigit);
-
   compSegmentCounter : Counter
     generic map (genMaxCount => 4)
     port map (inClock => sig1000Hz, inReset => sigResetPulse, outCount (1 downto 0) => sigSegment, outCount (13 downto 2) => open); -- Splits last two out... Look into doing with Logs
@@ -188,7 +199,7 @@ begin
     port map (clock => sigSelectedClock, reset => sigResetPulse, oRandomNumber =>  sigRNG);
     
   compDebouncer : Debouncer
-    port map (clock => inClock, input => inReset, output => sigResetPulse);
+    port map (clock => inClock, input => inReset, output => sigResetButton);
     
   compSegSelect : SegmentSelector
     port map (inDecimal => sigBinaryOut, outSegments => outDigit);
@@ -198,6 +209,9 @@ begin
     
   compBinaryDisplay : BitSplitter
     port map (inClock => sig2Hz, inBits => sigData, inReset => sigResetPulse, outMSB => sigMSB, outLSB => sigLSB);
+    
+  compChangeReset : T16_M2_Switch_Change_Reset
+    port map (inClock => sigSystemClock, inSwitches => inSwitches, outResetPulse => sigAutoReset);
 
 ------
 --Other Wiring
@@ -229,5 +243,7 @@ begin
                sigRNG when "101",
                sigStudentNumber when "110",
                sigStudentNumber when "111";
+               
+  sigResetPulse <= sigAutoReset OR sigResetButton;
 
 end Behavioral;

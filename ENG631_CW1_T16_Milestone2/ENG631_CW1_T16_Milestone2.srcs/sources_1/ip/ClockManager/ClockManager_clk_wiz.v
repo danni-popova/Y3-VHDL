@@ -56,7 +56,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1___100.000______0.000______50.0______130.958_____98.575
+// out100mhz___100.000______0.000______50.0______130.958_____98.575
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -69,19 +69,19 @@ module ClockManager_clk_wiz
 
  (// Clock in ports
   // Clock out ports
-  output        clk_out1,
+  output        out100mhz,
   // Status and control signals
   input         reset,
   output        locked,
-  input         clk_in1
+  input         in100mhz
  );
   // Input buffering
   //------------------------------------
-wire clk_in1_ClockManager;
+wire in100mhz_ClockManager;
 wire clk_in2_ClockManager;
   IBUF clkin1_ibufg
-   (.O (clk_in1_ClockManager),
-    .I (clk_in1));
+   (.O (in100mhz_ClockManager),
+    .I (in100mhz));
 
 
 
@@ -93,7 +93,7 @@ wire clk_in2_ClockManager;
   //    * Unused inputs are tied off
   //    * Unused outputs are labeled unused
 
-  wire        clk_out1_ClockManager;
+  wire        out100mhz_ClockManager;
   wire        clk_out2_ClockManager;
   wire        clk_out3_ClockManager;
   wire        clk_out4_ClockManager;
@@ -141,7 +141,7 @@ wire clk_in2_ClockManager;
    (
     .CLKFBOUT            (clkfbout_ClockManager),
     .CLKFBOUTB           (clkfboutb_unused),
-    .CLKOUT0             (clk_out1_ClockManager),
+    .CLKOUT0             (out100mhz_ClockManager),
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (clkout1_unused),
     .CLKOUT1B            (clkout1b_unused),
@@ -154,7 +154,7 @@ wire clk_in2_ClockManager;
     .CLKOUT6             (clkout6_unused),
      // Input clock control
     .CLKFBIN             (clkfbout_buf_ClockManager),
-    .CLKIN1              (clk_in1_ClockManager),
+    .CLKIN1              (in100mhz_ClockManager),
     .CLKIN2              (1'b0),
      // Tied to always select the primary input clock
     .CLKINSEL            (1'b1),
@@ -195,8 +195,8 @@ wire clk_in2_ClockManager;
 
 
   BUFG clkout1_buf
-   (.O   (clk_out1),
-    .I   (clk_out1_ClockManager));
+   (.O   (out100mhz),
+    .I   (out100mhz_ClockManager));
 
 
 
