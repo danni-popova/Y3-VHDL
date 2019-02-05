@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Tue Feb  5 14:47:15 2019
-| Host             : W0DA01E54C1964C running 64-bit major release  (build 9200)
+| Date             : Tue Feb  5 15:07:27 2019
+| Host             : W0DF5F8FBC19433 running 64-bit major release  (build 9200)
 | Command          : report_power -file TopComponent_power_routed.rpt -pb TopComponent_power_summary_routed.pb -rpx TopComponent_power_routed.rpx
 | Design           : TopComponent
 | Device           : xc7a35tcpg236-1
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      488 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      230 |     20800 |            1.11 |
+| Slice Logic    |    <0.001 |      496 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      239 |     20800 |            1.15 |
 |   CARRY4       |    <0.001 |       37 |      8150 |            0.45 |
 |   Register     |    <0.001 |      174 |     41600 |            0.42 |
 |   Others       |     0.000 |       25 |       --- |             --- |
-| Signals        |    <0.001 |      463 |       --- |             --- |
+| Signals        |    <0.001 |      447 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         5 |           20.00 |
 | I/O            |     0.006 |       19 |       106 |           17.92 |
 | Static Power   |     0.072 |          |           |                 |

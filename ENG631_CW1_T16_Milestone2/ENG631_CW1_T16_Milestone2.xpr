@@ -161,6 +161,7 @@
       </Config>
     </FileSet>
     <FileSet Name="Reset" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/Reset">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/Reset/new/T16_M2_Switch_Change_Reset_TB.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>

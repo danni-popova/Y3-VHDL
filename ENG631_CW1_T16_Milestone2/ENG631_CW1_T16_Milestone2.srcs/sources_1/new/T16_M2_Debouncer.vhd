@@ -30,7 +30,7 @@ begin
               end if;
           end if;
           
-          if highCount = 20000000 then
+          if highCount = 5000000 then
             Output <= '1';
           end if;
           
