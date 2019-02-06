@@ -37,11 +37,13 @@ begin
     --Places the left bit from the pair into the output
     with sigDataScroll select outMSB <=
         "000" & sigHalfOne(1) when '0',
-        "000" & sigHalfTwo(1) when '1';
+        "000" & sigHalfTwo(1) when '1',
+        "0000" when others;
 
     --places the right bit form the pair into the output
     with sigDataScroll select outLSB <=
         "000" & sigHalfOne(0) when '0',
-        "000" & sigHalfTwo(0) when '1';
+        "000" & sigHalfTwo(0) when '1',
+        "0000" when others;
 
 end Behavioral;
