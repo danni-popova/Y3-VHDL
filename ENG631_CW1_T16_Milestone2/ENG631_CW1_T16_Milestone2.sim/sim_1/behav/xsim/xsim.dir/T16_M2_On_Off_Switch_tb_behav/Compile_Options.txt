@@ -1,0 +1,1 @@
+-wto "1ed7250cc3c04c02bf8a24763c395645" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "T16_M2_On_Off_Switch_tb_behav" "xil_defaultlib.T16_M2_On_Off_Switch_tb" "xil_defaultlib.glbl" -log "elaborate.log" 
