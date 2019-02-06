@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 05.02.2019 13:12:39
--- Design Name: 
+-- Design Name:
 -- Module Name: T16_M2_On_Off_Switch - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 
@@ -47,11 +47,11 @@ begin
 
     toggle : process (inClock)
     begin
-        if rising_edge(inClock) then
-            sigOnOff <= inPulse XOR sigOnOff; 
+        if rising_edge(inClock) then --Clock pulse to make sure it doesn;t toggle constantly
+            sigOnOff <= inPulse XOR sigOnOff; --Toggle! If both are high, set output to low, when the pulse is high and output is low set the output high
         end if;
     end process toggle;
-    
+
      outState <= sigOnOff;
 
 end Behavioral;
