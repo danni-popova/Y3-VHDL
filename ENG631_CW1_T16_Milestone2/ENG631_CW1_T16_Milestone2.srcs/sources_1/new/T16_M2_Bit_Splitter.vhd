@@ -21,21 +21,26 @@ begin
 
     clock : process(inReset, inClock, inBits)
     begin
-        if inReset = '1' then -- changes if the reset is high or the input changes
+        if inReset = '1' then --This reset means that when the switches change this can be reset back to the first two bits
             sigDataScroll <= '0';
         elsif rising_edge(inClock) then
-            sigDataScroll <= NOT sigDataScroll;
+            sigDataScroll <= NOT sigDataScroll; --Toggle bits to scroll display
         end if;
     end process clock;
-    
+
+    --The following break each bit out and create the two outputs that will be scrolled thorugh
+
+    --Break the 4 bits into two halves
     sigHalfOne <= inBits(3 downto 2);
     sigHalfTwo <= inBits(1 downto 0);
-    
-    with sigDataScroll select outMSB <= 
+
+    --Places the left bit from the pair into the output
+    with sigDataScroll select outMSB <=
         "000" & sigHalfOne(1) when '0',
         "000" & sigHalfTwo(1) when '1';
-        
-    with sigDataScroll select outLSB <= 
+
+    --places the right bit form the pair into the output
+    with sigDataScroll select outLSB <=
         "000" & sigHalfOne(0) when '0',
         "000" & sigHalfTwo(0) when '1';
 
