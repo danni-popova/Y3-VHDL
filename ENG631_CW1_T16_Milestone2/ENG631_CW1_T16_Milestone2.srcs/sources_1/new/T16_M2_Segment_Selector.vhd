@@ -13,6 +13,8 @@ architecture Behavioral of SegmentSelector is
 
 begin
 
+  --0-f
+  --Left of When is the pattern for the commented number Right is the binary representation
   with inDecimal select
     outSegments <=  "10000001" when "0000", -- 0
                     "11001111" when "0001", -- 1
