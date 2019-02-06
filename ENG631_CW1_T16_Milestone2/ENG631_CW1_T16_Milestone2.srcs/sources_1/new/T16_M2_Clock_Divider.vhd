@@ -16,13 +16,16 @@ shared variable counter : integer range 0 to 400000000;
 
 begin
 
+    --Counter that will count to the nimber from the generic, and then send a Pulse
+    --at the maximum number and wrap round to zero, in effect creating a slower clock
+
     clockEnable : process (clock, reset)
     begin
         if reset = '1' then
             counter := 0;
-            clockOut <= '0'; --Check with Neils about this
+            clockOut <= '0';
         elsif rising_edge(clock) then
-            clockOut <= '0'; --Check with Neils about this
+            clockOut <= '0';
             if counter < MaxCount - 1 then
                 counter := counter + 1;
             else
