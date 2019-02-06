@@ -22,15 +22,15 @@ begin
     begin
         if rising_edge(inClock) then
             if ( lastState /= inSwitches ) then
+                --when the switches arent in the same state as the last time, set the output high
                 outResetPulse <= '1';
-            else outResetPulse <= '0';
+            else
+                --If there hasn;t been a change keep the output low
+                outResetPulse <= '0';
             end if;
-            
+            -- store the state of the switches for comaprison
             lastState <= inSwitches;
-            
         end if;
     end process reset;
-    
-    --outResetPulse <= changeDetected;
 
 end Behavioral;
