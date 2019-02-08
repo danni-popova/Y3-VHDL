@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity T16_M2_Random_Number_generator_tb is
---  Port ( );
+
 end T16_M2_Random_Number_generator_tb;
 
 architecture Behavioral of T16_M2_Random_Number_generator_tb is

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Tue Feb  5 15:07:01 2019
-| Host         : W0DF5F8FBC19433 running 64-bit major release  (build 9200)
+| Date         : Fri Feb  8 13:22:39 2019
+| Host         : W0D819A1BC194A5 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TopComponent_control_sets_placed.rpt
 | Design       : TopComponent
 | Device       : xc7a35t
@@ -68,8 +68,8 @@ Table of Contents
 |  inClock_IBUF_BUFG                |               |                                             |                4 |              4 |
 |  compClockManager/inst/out100mhz  |               |                                             |                2 |              5 |
 |  compOnOff/CLK                    |               | compResetDebouncer/reset                    |               10 |             28 |
-|  inClock_IBUF_BUFG                |               | compOnOffDebouncer/highCount[29]_i_1__0_n_0 |               17 |             30 |
 |  inClock_IBUF_BUFG                |               | compResetDebouncer/p_0_in                   |               13 |             30 |
+|  inClock_IBUF_BUFG                |               | compOnOffDebouncer/highCount[29]_i_1__0_n_0 |               17 |             30 |
 |  compClockManager/inst/out100mhz  |               | compResetDebouncer/reset                    |               29 |             73 |
 +-----------------------------------+---------------+---------------------------------------------+------------------+----------------+
 

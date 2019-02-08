@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ENG631_CW1_T16_Milestone2.srcs/sim_1/new/T16_M2_ClockDivider_TB.vhd" \
+
+# Do not sort compile order
+nosort
