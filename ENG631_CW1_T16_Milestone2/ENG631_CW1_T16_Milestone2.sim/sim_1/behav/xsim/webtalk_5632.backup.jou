@@ -2,11 +2,11 @@
 # Webtalk v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri Mar 29 11:40:13 2019
-# Process ID: 2288
+# Start of session at: Fri Feb  8 13:26:29 2019
+# Process ID: 5632
 # Current directory: N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.sim/sim_1/behav/xsim/xsim.dir/Mod_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.sim/sim_1/behav/xsim/xsim.dir/T16_M2_ClockDivider_TB_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.sim/sim_1/behav/xsim/xsim.dir/Mod_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+source N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.sim/sim_1/behav/xsim/xsim.dir/T16_M2_ClockDivider_TB_behav/webtalk/xsim_webtalk.tcl -notrace
