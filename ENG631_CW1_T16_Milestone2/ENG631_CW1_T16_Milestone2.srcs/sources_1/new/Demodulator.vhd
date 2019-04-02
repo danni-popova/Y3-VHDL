@@ -1,36 +1,6 @@
-----------------------------------------------------------------------------------
--- Company:
--- Engineer:
---
--- Create Date: 03/31/2019 02:56:37 PM
--- Design Name:
--- Module Name: Demodulator - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity Demodulator is
     Port ( inClock : in STD_LOGIC;
@@ -61,9 +31,12 @@ constant referenceWave : referenceWaveArray := (0, 32, 64, 32, 0, -32, -64, -32)
 
 begin
 
-updatePins : process ()
-begin
-end process updatePins;
+--updatePins : process ()
+--begin
+
+
+
+--end process updatePins;
 
 demodulate : process (inClock)
 begin
