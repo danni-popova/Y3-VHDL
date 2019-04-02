@@ -35,7 +35,7 @@ architecture Behavioral of TopComponent is
   component RandomNumberGenerator is
   Port ( clock : in STD_LOGIC;
          reset : in STD_LOGIC;
-         oRandomNumber : out STD_LOGIC_VECTOR (3 downto 0));
+         oRandomNumber : out STD_LOGIC_VECTOR (19 downto 0));
   end component RandomNumberGenerator;
 
 ------------------------------
@@ -287,7 +287,7 @@ begin
                "1110" when "010",           --E
                "1000" when "011",           --8
                sigCount when "100",         --0-f counter
-               sigRNG when "101",           --Random Number
+               sigRNG(3 downto 0) when "101",           --Random Number
                sigStudentNumber when "110", --Danni's Student Number
                sigStudentNumber when "111"; --Tom's Student Number
 

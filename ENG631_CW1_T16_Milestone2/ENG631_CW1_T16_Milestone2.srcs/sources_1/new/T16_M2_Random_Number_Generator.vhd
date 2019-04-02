@@ -7,7 +7,7 @@ entity RandomNumberGenerator is
 
 Port ( clock : in STD_LOGIC;
        reset : in STD_LOGIC;
-       oRandomNumber : out STD_LOGIC_VECTOR (3 downto 0));
+       oRandomNumber : out STD_LOGIC_VECTOR (19 downto 0));
 
 end RandomNumberGenerator;
 
@@ -34,6 +34,6 @@ begin
 
     END PROCESS rng;
 
-oRandomNumber <= sSeed(3 downto 0); --only need 4 bits
+oRandomNumber <= sSeed; --only need 4 bits
 
 end Behavioral;
