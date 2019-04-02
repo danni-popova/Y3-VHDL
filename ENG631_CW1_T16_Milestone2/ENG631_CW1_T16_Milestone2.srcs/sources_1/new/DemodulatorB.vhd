@@ -23,7 +23,7 @@ signal firstBits : std_logic_vector(1 downto 0);
 
 signal lastBits : std_logic_vector(1 downto 0);
 
-signal count : integer range 0 to 8 := 0;
+signal count : integer range 0 to 8 := 6;
 
 type referenceWaveArray is array (7 downto 0) of integer range -64 to 64;
 

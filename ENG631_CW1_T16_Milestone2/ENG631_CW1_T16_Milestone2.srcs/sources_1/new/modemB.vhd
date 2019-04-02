@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02.04.2019 13:44:03
+-- Create Date: 02.04.2019 14:27:03
 -- Design Name: 
--- Module Name: modemA - Behavioral
+-- Module Name: modemB - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,31 +31,29 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity modemA is
+entity modemB is
     Port ( inClock : in STD_LOGIC;
-           inClock2hz : in std_logic;
-           inData : in STD_LOGIC_VECTOR (3 downto 0);
-           inSwitches : in std_logic_vector (1 downto 0);
-           outData : out STD_LOGIC_VECTOR (3 downto 0));
-end modemA;
+           inData : in STD_LOGIC_VECTOR (1 downto 0);
+           inSwitches : in STD_LOGIC_VECTOR (1 downto 0);
+           outData : out STD_LOGIC_VECTOR (1 downto 0));
+end modemB;
 
-architecture Behavioral of modemA is
+architecture Behavioral of modemB is
 
-component DemodulatorA is
+component DemodulatorB is
     Port ( inClock : in STD_LOGIC;
        inI : in STD_LOGIC_VECTOR (7 downto 0);
        inQ : in STD_LOGIC_VECTOR (7 downto 0);
        outData : out STD_LOGIC_VECTOR (1 downto 0));
-end component DemodulatorA;
+end component DemodulatorB;
 
 
-component ModulatorA is
+component ModulatorB is
     Port ( inClock : in STD_LOGIC;
        inData : in STD_LOGIC_VECTOR (1 downto 0);
        outI : out STD_LOGIC_VECTOR (7 downto 0);
-       outQ : out STD_LOGIC_VECTOR (7 downto 0);
-       counter : out std_logic_vector (3 downto 0));
-end component ModulatorA;
+       outQ : out STD_LOGIC_VECTOR (7 downto 0));
+end component ModulatorB;
 
 
 component compError is
@@ -86,40 +84,11 @@ signal sigQError : STD_LOGIC_VECTOR (7 downto 0);
 signal sigOutI : STD_LOGIC_VECTOR (7 downto 0);
 signal sigOutQ : STD_LOGIC_VECTOR (7 downto 0); 
 
-signal wholeIn : std_logic_vector(3 downto 0);
-signal wholeOut : std_logic_vector(3 downto 0);
-
-signal toggle : integer range 0 to 1 :=1;
-
 begin
 
-bitBreakerProcess : process (inClock2hz)
-begin
-    toggle <= toggle+1;
-    
-    if toggle = 1 then
-        sigInData <= inData(3 downto 2);
-        wholeOut(3 downto 2) <= sigOutData;
-        outData <= wholeOut;
-    else
-        sigInData <= inData(1 downto 0);
-        wholeOut(1 downto 0) <= sigOutData;
-    end if;
-    
-end process bitBreakerProcess;
-
-crazyNewProcess : process(inClock2Hz)
-begin
-    if toggle = 1 then
-    
-    end if;
-    
-end process;
-
-
-modulator : ModulatorA
-port map (inClock => sigClock, inData => siginData, outI => sigI, outQ => sigQ, counter => open);
-demodulator : DemodulatorA
+modulator : ModulatorB
+port map (inClock => sigClock, inData => siginData, outI => sigI, outQ => sigQ);
+demodulator : DemodulatorB
 port map (inClock => sigClock, outData => sigoutData, inI => sigIError, inQ => sigQError);
 
 errorI : compError
@@ -131,5 +100,6 @@ sigClock <= inClock;
 
 sigSwitches <= inSwitches;
 
-
+outData <= sigOutData;
+sigInData <= inData;
 end Behavioral;

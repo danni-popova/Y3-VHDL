@@ -16,7 +16,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/up780962/AppData/Local/Temp/.Xil_up780962/Vivado-5152-W0D4D8497C199D6/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,6 +33,8 @@ set_property target_language VHDL [current_project]
 set_property ip_output_repo n:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
+  N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/Demodulator.vhd
+  N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/Modulator.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Bit_Splitter.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Clock_Divider.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Counter.vhd
@@ -40,6 +44,8 @@ read_vhdl -library xil_defaultlib {
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Segment_Selector.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Student_Number.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Switch_Change_Reset.vhd
+  N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/compError.vhd
+  N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/modemA.vhd
   N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/T16_M2_Top_Component.vhd
 }
 read_ip -quiet N:/GitHub/Y3-VHDL/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/ip/ClockManager/ClockManager.xci

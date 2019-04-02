@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 02.04.2019 13:47:42
+-- Create Date: 02.04.2019 14:30:20
 -- Design Name: 
--- Module Name: modemAComponent_tb - Behavioral
+-- Module Name: modemBcomponent_tb - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,32 +31,29 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity modemAComponent_tb is
+entity modemBcomponent_tb is
 --  Port ( );
-end modemAComponent_tb;
+end modemBcomponent_tb;
 
-architecture Behavioral of modemAComponent_tb is
-
-component modemA is
+architecture Behavioral of modemBcomponent_tb is
+component modemB is
     Port ( inClock : in STD_LOGIC;
-           inClock2hz : in std_logic;
-           inData : in STD_LOGIC_VECTOR (3 downto 0);
+           inData : in STD_LOGIC_VECTOR (1 downto 0);
            inSwitches : in std_logic_vector (1 downto 0);
-           outData : out STD_LOGIC_VECTOR (3 downto 0));
-end component modemA;
+           outData : out STD_LOGIC_VECTOR (1 downto 0));
+end component modemB;
 
-signal sigInData : std_logic_vector (3 downto 0);
-signal sigoutData : std_logic_vector (3 downto 0);
+signal sigInData : std_logic_vector (1 downto 0);
+signal sigoutData : std_logic_vector (1 downto 0);
 signal sigSwitches : std_logic_vector (1 downto 0);
 signal sigClock : std_logic ;
-signal sigClock2Hz : std_logic;
 
 
 
 begin
 
-UUTmodem : modemA
-    port map(inData => sigInData, inClock => sigClock, outData => sigOutData, inSwitches => sigSwitches, inClock2Hz => sigClock2Hz);
+UUTmodem : modemB
+    port map(inData => sigInData, inClock => sigClock, outData => sigOutData, inSwitches => sigSwitches);
 
 clock : process
 begin
@@ -66,35 +63,17 @@ begin
     wait for 100ns;
 end process;
 
-clock2 : process
-begin
-    sigClock2Hz <= '0';
-    wait for 1500ns;
-    sigClock2Hz <= '1';
-    wait for 100ns;
-end process;
-
 procData : process
 begin    
-    sigInData <= "1111";
+    sigInData <= "00";
     wait for 1600ns;
-    sigInData <= "1111";
+    sigInData <= "01";
     wait for 1600ns;
-    sigInData <= "0000";
+    sigInData <= "10";
     wait for 1600ns;
-    sigInData <= "1111";
-    wait for 1600ns;
-    sigInData <= "1111";
-    wait for 1600ns;
-    sigInData <= "1111";
-    wait for 1600ns;
-    sigInData <= "1010";
-    wait for 1600ns;
-    sigInData <= "1111";
+    sigInData <= "11";
     wait for 1600ns;
 end process;
 
 sigSwitches <= "00";
-
-
 end Behavioral;

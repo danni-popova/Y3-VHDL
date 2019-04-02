@@ -25,6 +25,9 @@ architecture Behavioral of ModulatorA is
    signal lastBits : std_logic_vector (1 downto 0);
    
    signal count : integer range 0 to 15;
+   
+   signal sigOutI : std_logic_vector (7 downto 0);
+   signal sigOutQ : std_logic_vector (7 downto 0);
 
 begin
 
@@ -32,6 +35,8 @@ begin
 
 counter <= conv_std_logic_vector(count, counter'length);
 
+outI <= sigOutI;
+outQ <= sigOutQ;
 
 transmit : process (inClock)
 begin
@@ -40,15 +45,15 @@ begin
     if rising_edge(inClock) then
 
         if inData(1) = '0' then
-            outI <= zeroWave(count);
+            sigOutI <= zeroWave(count);
         else
-            outI <= oneWave(count);
+            sigOutI <= oneWave(count);
         end if; 
         
         if inData(0) = '0' then
-            outQ <= zeroWave(count);
+            sigOutQ <= zeroWave(count);
         else
-            outQ <= oneWave(count);
+            sigOutQ <= oneWave(count);
         end if; 
         
         if count < 7 then
