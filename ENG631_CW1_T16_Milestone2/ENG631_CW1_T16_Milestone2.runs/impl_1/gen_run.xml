@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1549631997">
-  <File Type="PWROPT-DCP" Name="TopComponent_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="TopComponent_power_routed.rpt"/>
   <File Type="PA-TCL" Name="TopComponent.tcl"/>
+  <File Type="PWROPT-DCP" Name="TopComponent_pwropt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="TopComponent_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="TopComponent_reports.tcl"/>
   <File Type="BG-DRC" Name="TopComponent.drc"/>
-  <File Type="OPT-DCP" Name="TopComponent_opt.dcp"/>
   <File Type="OPT-HWDEF" Name="TopComponent.hwdef"/>
+  <File Type="OPT-DCP" Name="TopComponent_opt.dcp"/>
   <File Type="OPT-DRC" Name="TopComponent_drc_opted.rpt"/>
   <File Type="PLACE-DCP" Name="TopComponent_placed.dcp"/>
   <File Type="PLACE-IO" Name="TopComponent_io_placed.rpt"/>
@@ -23,22 +23,22 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="TopComponent_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="TopComponent_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="TopComponent_drc_routed.pb"/>
-  <File Type="BITSTR-MSK" Name="TopComponent.msk"/>
   <File Type="ROUTE-DRC-RPX" Name="TopComponent_drc_routed.rpx"/>
-  <File Type="BG-BGN" Name="TopComponent.bgn"/>
+  <File Type="BITSTR-MSK" Name="TopComponent.msk"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="TopComponent_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-RBT" Name="TopComponent.rbt"/>
+  <File Type="BG-BGN" Name="TopComponent.bgn"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="TopComponent_methodology_drc_routed.rpx"/>
-  <File Type="BG-BIN" Name="TopComponent.bin"/>
+  <File Type="BITSTR-RBT" Name="TopComponent.rbt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="TopComponent_methodology_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="TopComponent.bin"/>
   <File Type="ROUTE-PWR-RPX" Name="TopComponent_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="TopComponent_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="TopComponent_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="TopComponent_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="TopComponent_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="TopComponent_timing_summary_routed.rpx"/>
-  <File Type="RDI-RDI" Name="TopComponent.vdi"/>
   <File Type="ROUTE-CLK" Name="TopComponent_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="TopComponent.vdi"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="TopComponent_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="TopComponent_postroute_physopt_bb.dcp"/>
   <File Type="BITSTR-NKY" Name="TopComponent.nky"/>

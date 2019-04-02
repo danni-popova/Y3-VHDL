@@ -103,22 +103,19 @@ begin
 
 accumulate : process (inClock)
 begin
-
-    
-
     if rising_edge(inClock) then
         --Firstly when the count is zero we can use the accumulated value to determine the outputs
         if count = 0 then        
             if accumulatorI > 0 then
-                outData(0) <='0';
-            else
-                outdata(0) <='1';
-            end if;
-            
-            if accumulatorQ > 0 then
                 outData(1) <='0';
             else
                 outdata(1) <='1';
+            end if;
+            
+            if accumulatorQ > 0 then
+                outData(0) <='0';
+            else
+                outdata(0) <='1';
             end if;
         end if;
     

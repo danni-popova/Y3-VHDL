@@ -41,13 +41,14 @@ component Demodulator is
     Port ( inClock : in STD_LOGIC;
            inI : in STD_LOGIC_VECTOR (7 downto 0);
            inQ : in STD_LOGIC_VECTOR (7 downto 0);
-           outData : out STD_LOGIC_VECTOR (3 downto 0));
+           outData : out STD_LOGIC_VECTOR (1 downto 0));
 end component Demodulator;
 
 signal sigClock : STD_LOGIC := '0';
-signal sigData : STD_LOGIC_VECTOR (3 downto 0);
+signal sigData : STD_LOGIC_VECTOR (1 downto 0);
 signal sigI : STD_LOGIC_VECTOR (7 downto 0);
 signal sigQ : STD_LOGIC_VECTOR (7 downto 0); 
+signal run : integer range 0 to 1 := 0;
 --signal counter : std_logic_vector (3 downto 0);
 
 begin
@@ -65,6 +66,11 @@ end process;
   
 procDataprocess: process
 begin
+    if run = 0 then
+    wait for 100ns;
+    run <= 1;
+    end if;
+    
     sigI <= "10100000";
     sigQ <= "01100000";
     wait for 200ns;

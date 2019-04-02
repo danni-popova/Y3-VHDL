@@ -41,12 +41,12 @@ component Demodulator is
     Port ( inClock : in STD_LOGIC;
        inI : in STD_LOGIC_VECTOR (7 downto 0);
        inQ : in STD_LOGIC_VECTOR (7 downto 0);
-       outData : out STD_LOGIC_VECTOR (3 downto 0));
+       outData : out STD_LOGIC_VECTOR (1 downto 0));
 end component Demodulator;
 
 component Modulator is
     Port ( inClock : in STD_LOGIC;
-           inData : in STD_LOGIC_VECTOR (3 downto 0);
+           inData : in STD_LOGIC_VECTOR (1 downto 0);
            outI : out STD_LOGIC_VECTOR (7 downto 0);
            outQ : out STD_LOGIC_VECTOR (7 downto 0);
            counter : out std_logic_vector (3 downto 0));
@@ -54,8 +54,8 @@ component Modulator is
 end component Modulator;
 
 signal sigClock : STD_LOGIC := '0';
-signal siginData : STD_LOGIC_VECTOR (3 downto 0);
-signal sigoutdata : std_logic_vector(3 downto 0);
+signal siginData : STD_LOGIC_VECTOR (1 downto 0);
+signal sigoutdata : std_logic_vector(1 downto 0);
 signal sigI : STD_LOGIC_VECTOR (7 downto 0);
 signal sigQ : STD_LOGIC_VECTOR (7 downto 0); 
 signal sigOutI : STD_LOGIC_VECTOR (7 downto 0);
@@ -79,21 +79,18 @@ end process;
 
 procData : process
 begin
-    if run = 0 then
-    wait for 2900ns;
-    run <= 1;
-    end if;
+--    if run = 0 then
+--    wait for 0ns;
+--    run <= 1;
+--    end if;
     
-    sigInData <= "0000";
-    wait for 3200ns;
-    sigInData <= "0001";
-    wait for 3200ns;
-    sigInData <= "0010";
-    wait for 3200ns;
-    sigInData <= "0011";
-    wait for 3200ns;
-    sigInData <= "0100";
-    wait for 3200ns;
+    sigInData <= "00";
+    wait for 1600ns;
+    sigInData <= "01";
+    wait for 1600ns;
+    sigInData <= "10";
+    wait for 1600ns;
+    sigInData <= "11";
 end process;
 
 end Behavioral;
