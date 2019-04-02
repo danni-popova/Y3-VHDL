@@ -52,24 +52,22 @@ extern void execute_6(char*, char *);
 extern void execute_7(char*, char *);
 extern void execute_8(char*, char *);
 extern void execute_9(char*, char *);
-extern void execute_30(char*, char *);
-extern void execute_31(char*, char *);
+extern void execute_28(char*, char *);
+extern void execute_29(char*, char *);
 extern void execute_21(char*, char *);
 extern void execute_22(char*, char *);
-extern void execute_23(char*, char *);
-extern void execute_24(char*, char *);
-extern void execute_29(char*, char *);
+extern void execute_27(char*, char *);
 extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
 extern void transaction_32(char*, char*, unsigned, unsigned, unsigned);
 extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[18] = {(funcp)execute_2, (funcp)execute_3, (funcp)execute_4, (funcp)execute_5, (funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_30, (funcp)execute_31, (funcp)execute_21, (funcp)execute_22, (funcp)execute_23, (funcp)execute_24, (funcp)execute_29, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_32, (funcp)vhdl_transfunc_eventcallback};
-const int NumRelocateId= 18;
+funcp funcTab[16] = {(funcp)execute_2, (funcp)execute_3, (funcp)execute_4, (funcp)execute_5, (funcp)execute_6, (funcp)execute_7, (funcp)execute_8, (funcp)execute_9, (funcp)execute_28, (funcp)execute_29, (funcp)execute_21, (funcp)execute_22, (funcp)execute_27, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_32, (funcp)vhdl_transfunc_eventcallback};
+const int NumRelocateId= 16;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/Modem_tb_behav/xsim.reloc",  (void **)funcTab, 18);
-	iki_vhdl_file_variable_register(dp + 9984);
-	iki_vhdl_file_variable_register(dp + 10040);
+	iki_relocate(dp, "xsim.dir/Modem_tb_behav/xsim.reloc",  (void **)funcTab, 16);
+	iki_vhdl_file_variable_register(dp + 10680);
+	iki_vhdl_file_variable_register(dp + 10736);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */
