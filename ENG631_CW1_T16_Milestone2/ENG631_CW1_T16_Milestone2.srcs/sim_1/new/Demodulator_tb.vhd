@@ -31,18 +31,18 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Demodulator_tb is
+entity DemodulatorA_tb is
 --  Port ( );
-end Demodulator_tb;
+end DemodulatorA_tb;
 
-architecture Behavioral of Demodulator_tb is
+architecture Behavioral of DemodulatorA_tb is
 
-component Demodulator is
+component DemodulatorA is
     Port ( inClock : in STD_LOGIC;
            inI : in STD_LOGIC_VECTOR (7 downto 0);
            inQ : in STD_LOGIC_VECTOR (7 downto 0);
            outData : out STD_LOGIC_VECTOR (1 downto 0));
-end component Demodulator;
+end component DemodulatorA;
 
 signal sigClock : STD_LOGIC := '0';
 signal sigData : STD_LOGIC_VECTOR (1 downto 0);
@@ -53,7 +53,7 @@ signal run : integer range 0 to 1 := 0;
 
 begin
 
-UUT : Demodulator
+UUT : DemodulatorA
     port map (inClock => sigClock, outData => sigData, inI => sigI, inQ => sigQ);
     
 procClock : process

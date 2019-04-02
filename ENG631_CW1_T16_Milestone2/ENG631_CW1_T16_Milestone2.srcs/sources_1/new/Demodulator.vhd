@@ -2,14 +2,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 
-entity Demodulator is
+entity DemodulatorA is
     Port ( inClock : in STD_LOGIC;
            inI : in STD_LOGIC_VECTOR (7 downto 0);
            inQ : in STD_LOGIC_VECTOR (7 downto 0);
            outData : out STD_LOGIC_VECTOR (1 downto 0));
-end Demodulator;
+end DemodulatorA;
 
-architecture Behavioral of Demodulator is
+architecture Behavioral of DemodulatorA is
 
 signal accumulatorI : integer range -30000 to 30000 := 0;
 

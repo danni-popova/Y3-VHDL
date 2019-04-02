@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 01.04.2019 15:10:37
+-- Create Date: 02.04.2019 12:49:13
 -- Design Name: 
--- Module Name: Modem_tb - Behavioral
+-- Module Name: modulatorB_tb - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,27 +31,26 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ModemA_tb is
+entity modemB_tb is
 --  Port ( );
-end ModemA_tb;
+end modemB_tb;
 
-architecture Behavioral of ModemA_tb is
+architecture Behavioral of modemB_tb is
 
-component DemodulatorA is
+component Demodulatorb is
     Port ( inClock : in STD_LOGIC;
        inI : in STD_LOGIC_VECTOR (7 downto 0);
        inQ : in STD_LOGIC_VECTOR (7 downto 0);
        outData : out STD_LOGIC_VECTOR (1 downto 0));
-end component DemodulatorA;
+end component Demodulatorb;
 
-component ModulatorA is
+component Modulatorb is
     Port ( inClock : in STD_LOGIC;
            inData : in STD_LOGIC_VECTOR (1 downto 0);
            outI : out STD_LOGIC_VECTOR (7 downto 0);
-           outQ : out STD_LOGIC_VECTOR (7 downto 0);
-           counter : out std_logic_vector (3 downto 0));
+           outQ : out STD_LOGIC_VECTOR (7 downto 0));
            
-end component ModulatorA;
+end component Modulatorb;
 
 signal sigClock : STD_LOGIC := '0';
 signal siginData : STD_LOGIC_VECTOR (1 downto 0);
@@ -64,9 +63,9 @@ signal run : integer range 0 to 1 := 0;
 
 begin
 
-UUTmodulator : ModulatorA
-port map (inClock => sigClock, inData => siginData, outI => sigI, outQ => sigQ, counter => open);
-UUTdemodulator : DemodulatorA
+UUTmodulator : Modulatorb
+port map (inClock => sigClock, inData => siginData, outI => sigI, outQ => sigQ);
+UUTdemodulator : Demodulatorb
 port map (inClock => sigClock, outData => sigoutData, inI => sigI, inQ => sigQ);
 
 procClock : process
@@ -79,10 +78,10 @@ end process;
 
 procData : process
 begin
---    if run = 0 then
---    wait for 0ns;
---    run <= 1;
---    end if;
+    if run = 0 then
+    wait for 0ns;
+    run <= 1;
+    end if;
     
     sigInData <= "00";
     wait for 1600ns;
@@ -91,6 +90,8 @@ begin
     sigInData <= "10";
     wait for 1600ns;
     sigInData <= "11";
+    wait for 1600ns;
 end process;
+
 
 end Behavioral;
