@@ -1,15 +1,17 @@
+-- Team 16 - 782716, 780962
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity modemA is
+entity ModemA is
     Port ( inClock : in STD_LOGIC;
            inClock2hz : in std_logic;
            inData : in STD_LOGIC_VECTOR (3 downto 0);
            inSwitches : in std_logic_vector (1 downto 0);
            outData : out STD_LOGIC_VECTOR (3 downto 0));
-end modemA;
+end ModemA;
 
-architecture Behavioral of modemA is
+architecture Behavioral of ModemA is
 
 component DemodulatorA is
     Port ( inClock : in STD_LOGIC;
@@ -28,7 +30,7 @@ component ModulatorA is
 end component ModulatorA;
 
 
-component compError is
+component ErrorSelect is
     Port(
         inClock : in STD_LOGIC;
         inData : in STD_LOGIC_VECTOR (7 downto 0);
@@ -36,11 +38,7 @@ component compError is
         inReset : in STD_LOGIC;
         outData : out STD_LOGIC_VECTOR(7 downto 0)
         );
-end component compError;
-
-
-
-
+end component ErrorSelect;
 
 signal sigClock : STD_LOGIC := '0';
 signal siginData : STD_LOGIC_VECTOR (1 downto 0);
@@ -92,9 +90,9 @@ port map (inClock => sigClock, inData => siginData, outI => sigI, outQ => sigQ, 
 demodulator : DemodulatorA
 port map (inClock => sigClock, outData => sigoutData, inI => sigIError, inQ => sigQError);
 
-errorI : compError
+errorI : ErrorSelect
 port map (inClock => sigClock, inData => sigI, outData => sigIerror, inReset => '0', inSwitches => sigSwitches);
-errorQ : compError
+errorQ : ErrorSelect
 port map (inClock => sigClock, inData => sigQ, outData => sigQerror, inReset => '0', inSwitches => sigSwitches);
 
 sigClock <= inClock;
