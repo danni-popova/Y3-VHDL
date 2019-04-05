@@ -89,15 +89,15 @@ signal sigOutQ : STD_LOGIC_VECTOR (7 downto 0);
 signal wholeIn : std_logic_vector(3 downto 0);
 signal wholeOut : std_logic_vector(3 downto 0);
 
-signal toggle : integer range 0 to 1 :=1;
+signal toggle : std_logic :='1';
 
 begin
 
 bitBreakerProcess : process (inClock2hz)
 begin
-    toggle <= toggle+1;
+    toggle <= NOT(toggle);
     
-    if toggle = 1 then
+    if toggle = '1' then
         sigInData <= inData(3 downto 2);
         wholeOut(3 downto 2) <= sigOutData;
         outData <= wholeOut;
@@ -110,7 +110,7 @@ end process bitBreakerProcess;
 
 crazyNewProcess : process(inClock2Hz)
 begin
-    if toggle = 1 then
+    if toggle = '1' then
     
     end if;
     
