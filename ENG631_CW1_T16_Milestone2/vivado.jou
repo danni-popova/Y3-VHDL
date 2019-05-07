@@ -2,13 +2,16 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Wed Feb  6 16:08:12 2019
-# Process ID: 8876
+# Start of session at: Sun Mar 31 14:27:14 2019
+# Process ID: 18184
 # Current directory: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16_Milestone2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17196 D:\University\ENG631 - VHDL and FPGA\VHDL Source\ENG631_CW1_T16_Milestone2\ENG631_CW1_T16_Milestone2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17916 D:\University\ENG631 - VHDL and FPGA\VHDL Source\ENG631_CW1_T16_Milestone2\ENG631_CW1_T16_Milestone2.xpr
 # Log file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16_Milestone2/vivado.log
 # Journal file: D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16_Milestone2\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.xpr}
+update_compile_order -fileset sources_1
+close [ open {D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/Demodulator.vhd} w ]
+add_files {{D:/University/ENG631 - VHDL and FPGA/VHDL Source/ENG631_CW1_T16_Milestone2/ENG631_CW1_T16_Milestone2.srcs/sources_1/new/Demodulator.vhd}}
 update_compile_order -fileset sources_1

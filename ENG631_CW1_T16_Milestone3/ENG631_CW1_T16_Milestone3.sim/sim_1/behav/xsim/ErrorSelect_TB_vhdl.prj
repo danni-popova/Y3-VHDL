@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ENG631_CW1_T16_Milestone3.srcs/sources_1/new/T16_M3_ErrorSelect.vhd" \
+"../../../../ENG631_CW1_T16_Milestone3.srcs/sources_1/new/T16_M3_Random_Number_Generator.vhd" \
+"../../../../T16_M3_Error_Select_TB.vhd" \
+
+# Do not sort compile order
+nosort
