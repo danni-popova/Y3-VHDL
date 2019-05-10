@@ -35,7 +35,7 @@ architecture Behavioral of TopComponent is
   component RandomNumberGenerator is
   Port ( clock : in STD_LOGIC;
          reset : in STD_LOGIC;
-         oRandomNumber : out STD_LOGIC_VECTOR (3 downto 0));
+         oRandomNumber : out STD_LOGIC_VECTOR (19 downto 0));
   end component RandomNumberGenerator;
 
 ------------------------------
@@ -139,6 +139,14 @@ architecture Behavioral of TopComponent is
              inPulse : in STD_LOGIC;
              outState : out STD_LOGIC);
   end component T16_M2_On_Off_Switch;
+  
+  component modemA is
+      Port ( inClock : in STD_LOGIC;
+         inClock2hz : in std_logic;
+         inData : in STD_LOGIC_VECTOR (3 downto 0);
+         inSwitches : in std_logic_vector (1 downto 0);
+         outData : out STD_LOGIC_VECTOR (3 downto 0));
+  end component modemA;
 
 --Signals
 
@@ -183,6 +191,10 @@ signal sigOnOffButton : std_Logic;
 
 signal sigDisplayOut : std_logic_vector (3 downto 0);
 
+signal sig16Hz : std_logic;
+
+signal modulatedData : std_logic_vector (3 downto 0);
+
 begin
 
 ------
@@ -208,6 +220,10 @@ begin
     generic map (MaxCount => 100000) -- Counting to 100000000 gives a frequency of 1 hz
     port map (reset => sigResetPulse, clock => sigSystemClock, clockOut => sig1000Hz);
 
+  compClock16Hz : ClockDivider
+    generic map (MaxCount => 6250000)
+    port map (reset => sigResetPulse, clock => sigSystemClock, clockOut => sig16Hz);
+
   --The 0-f counter
   compFCounter : Counter
     generic map (genMaxCount => 16)
@@ -220,7 +236,7 @@ begin
 
   --The Random number generator
   compRNG : RandomNumberGenerator
-    port map (clock => sigSelectedClock, reset => sigResetPulse, oRandomNumber =>  sigRNG);
+    port map (clock => sigSelectedClock, reset => sigResetPulse, oRandomNumber(3 downto 0) =>  sigRNG, oRandomNumber(19 downto 4) => open);
 
   --Debouncer for the reset button
   compResetDebouncer : Debouncer
@@ -240,7 +256,7 @@ begin
 
   --Takes in a four bit number, and clocks through two bit outputs
   compBinaryDisplay : BitSplitter
-    port map (inClock => sig2Hz, inBits => sigData, inReset => sigResetPulse, outMSB => sigMSB, outLSB => sigLSB);
+    port map (inClock => sig2Hz, inBits => modulatedData, inReset => sigResetPulse, outMSB => sigMSB, outLSB => sigLSB);
 
   --This detects a change on the input switches, and will output a pulse if their state changes
   compChangeReset : T16_M2_Switch_Change_Reset
@@ -250,6 +266,9 @@ begin
   --Creates the on-off functionality
   compOnOff : T16_M2_On_Off_Switch
     port map (inClock => sigSystemClock, inPulse => sigOnOffButton, outState => sigRunning);
+    
+  modemA1 : modemA
+    port map(inData => sigData , inClock => sig16Hz, outData => modulatedData, inSwitches => "00", inClock2Hz => sig2Hz); --Needs a 16Hz Clock
 
 ------
 --Other Wiring
@@ -267,7 +286,7 @@ begin
   with sigSegment select --Multiplex to display
     sigBinaryOut <=  sigLSB when "00",
                      sigMSB when "01",
-                     sigData when "10",
+                     modulatedData when "10",
                      "0" & inSwitches when "11";
 
   --Displays all zeroes when running isn't high i.e. the system has stopped
@@ -287,7 +306,7 @@ begin
                "1110" when "010",           --E
                "1000" when "011",           --8
                sigCount when "100",         --0-f counter
-               sigRNG when "101",           --Random Number
+               sigRNG(3 downto 0) when "101",           --Random Number
                sigStudentNumber when "110", --Danni's Student Number
                sigStudentNumber when "111"; --Tom's Student Number
 
